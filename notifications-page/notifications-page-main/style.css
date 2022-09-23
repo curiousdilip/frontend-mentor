@@ -1,0 +1,93 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --verylightgrayishblue: hsl(210, 60%, 98%);
+  --lightgrayishblue1: hsl(211, 68%, 94%);
+  --lightgrayishblue2: hsl(205, 33%, 90%);
+  --grayishblue: hsl(219, 14%, 63%);
+  --darkgrayishblue: hsl(219, 12%, 42%);
+  --verydarkblue: hsl(224, 21%, 14%);
+  --blue: hsl(219, 85%, 26%);
+}
+
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.n-no
+{
+    background-color: var(--blue);
+    padding:2px 10px ;
+    color: var(--white);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+body {
+  background-color: var(--verylightgrayishblue);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: black;
+}
+
+p {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.notification {
+  padding: 20px;
+  background-color: var(--verylightgrayishblue);
+  border-radius: 20px;
+  margin: 10px 0;
+  display: flex;
+}
+
+.notification img {
+  width: 50px;
+  cursor: pointer;
+}
+
+.box {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 120px 1200px var(--lightgrayishblue1);
+  width: 38%;
+  margin: auto;
+  padding: 20px;
+}
+
+.message {
+    margin-top: 10px;
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.message:hover {
+  background-color: var(--lightgrayishblue2);
+}
+
+.name {
+  color: var(--verydarkblue);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.name:hover {
+  color: var(--blue);
+}
