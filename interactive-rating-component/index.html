@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      font-family: 'Overpass', sans-serif;
+      background-color: hsl(216, 12%, 8%);
+    }
+
+    .hide {
+      display: none;
+    }
+
+
+    .title {
+      color: hsl(0, 0%, 100%);
+      font-size: 2.4rem;
+      margin-top: 10%;
+      margin-bottom: 2%;
+    }
+
+    .text {
+      color: hsl(217, 12%, 63%);
+
+    }
+
+    .ratingWrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .ratingbin {
+      color: hsl(217, 12%, 63%);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 15px;
+      background-color: hsl(216, 12%, 54%, 0.1);
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+    }
+
+    .ratingbin:hover {
+      background-color: hsl(25, 97%, 53%);
+      cursor: pointer;
+      color: white;
+    }
+
+    .active {
+      background-color: hsl(217, 12%, 63%);
+      color: white;
+
+    }
+
+    .submitbtn {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 200;
+      margin-top: 20px;
+      background-color: hsl(25, 97%, 53%);
+      width: 25rem;
+      height: 3rem;
+      border-radius: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+    }
+
+    .submitbtn:hover {
+      background-color: white;
+      cursor: pointer;
+      color: hsl(25, 97%, 53%);
+    }
+
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .star {
+      width: 4.5rem;
+      height: 4.5rem;
+      padding: 1.5rem;
+      margin-top: 0.5%;
+      margin-bottom: 10%;
+      border-radius: 50%;
+      background-color: hsl(216, 12%, 54%, 0.1);
+      text-align: center;
+      display: flex;
+      justify-items: center;
+
+    }
+
+    img {
+      width: 14px;
+      height: 15px;
+
+    }
+
+    .card {
+      background-color: hsl(213, 19%, 18%);
+      width: 300px;
+      height: 300px;
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+    }
+
+    .classcontent2 {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+    }
+
+    .texta {
+      margin-top: 3%;
+      margin-bottom: 30%;
+      text-align: center;
+      font-size: 100%;
+      color: hsl(217, 12%, 63%);
+
+    }
+
+    .drogo {
+
+      width: 120px;
+      height: 80px;
+      margin-left: 23%;
+    }
+
+    .result {
+      font-size: small;
+      font-weight: 200;
+      width: 20rem;
+      height: 3.5rem;
+      border-radius: 1.5rem;
+      margin-top: 10%;
+      margin-left: 10%;
+      background-color: hsl(216, 12%, 54%, 0.1);
+      color: hsl(25, 97%, 53%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <section class="container">
+
+    <div class="card">
+      <div class="classcontent1">
+        <div class="star">
+          <img src="./images/icon-star.svg" alt="icon-star" />
+        </div>
+        <h1 class="title">How did we do?</h1>
+        <div class="text">
+          Please let us know how we did with your support request. All
+          feedback is appreciated to help us<br />improve our offering!
+        </div>
+
+        <div class="ratingWrapper">
+          <div class="ratingbin">
+            <div>1</div>
+          </div>
+          <div class="ratingbin">
+            <div>2</div>
+          </div>
+          <div class="ratingbin">
+            <div>3</div>
+          </div>
+          <div class="ratingbin active">
+            <div>4</div>
+          </div>
+          <div class="ratingbin">
+            <div>5</div>
+          </div>
+        </div>
+        <div class="submitbtn">Submit</div>
+      </div>
+
+      <div class="classcontent2 hide">
+        <img class="drogo" src="./images/illustration-thank-you.svg" alt="thank you" />
+        <div class="result">
+          <div>You selected <span class="score">4</span> out of 5</div>
+        </div>
+        <h2 class="title">Thank you</h2>
+        <div class="texta">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t <br />hesitate to get in touch!
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script>
+    const submitbtn = document.querySelector(`.submitbtn`);
+    const classcontent1 = document.querySelector(`.classcontent1`);
+    const classcontent2 = document.querySelector(`.classcontent2`);
+    const ratingbin = document.querySelectorAll(`.ratingbin`);
+    const score = document.querySelector(`.score`);
+    let stars_score = 4
+
+
+    submitbtn.addEventListener(`click`, onsubmit);
+    ratingbin.forEach(btn => {
+      btn.addEventListener(`click`, handleRatingBtnClick);
+    });
+
+    function onsubmit() {
+      classcontent1.classList.add(`hide`);
+      score.textContent = stars_score;
+      classcontent2.classList.remove(`hide`);
+    }
+
+    function handleRatingBtnClick(event) {
+
+      ratingbin.forEach(btn => {
+        btn.classList.remove(`active`);
+      });
+
+      if (event.target.classList.contains(`ratingbin`)) {
+        event.target.classList.add(`active`);
+      } else {
+        event.target.parentElement.classList.add(`active`);
+      }
+
+      stars_score = event.target.textContent;
+      console.log(stars_score);
+
+    }
+
+//console.log(submitbtn)
+  </script>
+</body>
+
+</html>
