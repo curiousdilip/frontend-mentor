@@ -44,6 +44,31 @@
       border-radius: 30px;
     }
 
+    @media (max-width:768px) {
+      section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: auto;
+        box-shadow: none;
+      }
+
+      section .left {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        width: 100%;
+      }
+
+      section .right {
+        width: 100%;
+      }
+
+      body {
+        display: flex;
+        justify-content: start;
+      }
+    }
 
     .left {
       width: 50%;
