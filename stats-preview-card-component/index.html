@@ -1,33 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Stats preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+    rel="stylesheet">
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    :root {
+      --main-background: hsl(233, 47%, 7%);
+      --card-background: hsl(244, 38%, 16%);
+      --accent: hsl(277, 64%, 61%);
+      --white: hsl(0, 0%, 100%);
+      --main-paragraph: hsla(0, 0%, 100%, 0.75);
+      --stat-headings: hsla(0, 0%, 100%, 0.6);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-family: 'Lexend Deca', sans-serif;
+      font-size: 15px;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
-
-  Get insights that help your business grow.
-
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
-
-  10k+ companies
-  314 templates
-  12m+ queries
-
+  <main>
+    <section>
+      <div class="left">
+        <h1>Get <span>insights</span> that help your business grow.</h1>
+        <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer
+          experience, and overall efficiency.</p>
+        <div class="stats">
+          <div class="company">
+            <h2>10k+</h2>
+            <h3>companies</h3>
+          </div>
+          <div class="template">
+            <h2>314</h2>
+            <h3>templates</h3>
+          </div>
+          <div class="queries">
+            <h2>12m+</h2>
+            <h3>queries</h3>
+          </div>
+        </div>
+      </div>
+      <div class="right"></div>
+    </section>
+  </main>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.dilipmaurya.in">Dilip Kumar Maurya</a>.
   </div>
 </body>
+
 </html>
