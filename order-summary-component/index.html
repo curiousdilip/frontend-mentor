@@ -10,6 +10,10 @@
 
   <title>Frontend Mentor | Order summary card</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     * {
@@ -22,16 +26,125 @@
       background: url(./images/pattern-background-desktop.svg) no-repeat;
       background-size: cover;
       background-color: hsl(225, 100%, 94%);
+      font-family: 'Red Hat Display', sans-serif;
+      font-size: 16px;
     }
 
     section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
     .box {
       width: 450px;
+      border-radius: 20px;
+      background-color: white;
+      box-shadow: 0px 0px 25px hsla(223, 47%, 23%, 0.2);
+    }
+
+    .box .img-container {
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      background: url(./images/illustration-hero.svg) no-repeat;
+      height: 220px;
+    }
+
+    .box .text-container {
+      padding: 54px 45px;
+      text-align: center;
+    }
+
+    .box .text-container h1 {
+      color: hsl(223, 47%, 23%);
+      font-weight: 900;
+
+    }
+
+    .box .text-container p {
+      color: hsl(224, 23%, 55%);
+      margin: 20px 0;
+      font-weight: 500;
+    }
+
+    .box .text-container .plan {
+      background-color: hsl(225, 100%, 98%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 25px 20px;
+      border-radius: 15px;
+      margin-bottom: 32px;
+    }
+
+    .box .text-container .plan .ap {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+    }
+
+    .box .text-container .plan .ap p {
+      color: hsl(223, 47%, 23%);
+      margin-top: 0;
+      margin-bottom: 5px;
+      font-weight: 900;
+    }
+
+    .box .text-container .plan a {
+      text-decoration: underline;
+      color: hsl(245, 75%, 52%);
+      font-weight: 700;
+    }
+
+    .box .text-container .plan .ap img {
+      margin-right: 20px;
+    }
+
+    .box .text-container .plan .ap span {
+      color: hsl(224, 23%, 55%);
+
+    }
+
+    .box .text-container .btn {
+      background-color: hsl(245, 75%, 52%);
+      padding: 18px 0;
+      border-radius: 15px;
+      box-shadow: 0px 10px 25px hsla(223, 47%, 23%, 0.1);
+      margin-bottom: 36px;
+    }
+
+    .box .text-container .btn a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 900;
+    }
+
+    .box .text-container a {
+      text-decoration: none;
+      color: hsl(224, 23%, 55%);
+      font-weight: 900;
+
+    }
+
+
+
+    a {
+      color: hsl(225, 100%, 94%);
+      color: hsl(245, 75%, 52%);
+      color: hsl(225, 100%, 98%);
+      color: hsl(224, 23%, 55%);
+      color: hsl(223, 47%, 23%)
+    }
+
+    @media (max-width:768px) {
+      .box {
+        width: 350px;
+      }
+
+      .box .text-container {
+        padding: 38px 22 px;
+      }
     }
 
     .attribution {
@@ -51,8 +164,8 @@
 <body>
   <section>
     <div class="box">
-      <div class="image-container">
-        <img src="./images/illustration-hero.svg" alt="">
+      <div class="img-container">
+        <!-- <img src="./images/illustration-hero.svg" alt=""> -->
       </div>
       <div class="text-container">
         <h1>Order Summary</h1>
@@ -61,12 +174,15 @@
         <div class="plan">
           <div class="ap">
             <img src="./images/icon-music.svg" alt="">
-            <p>Annual Plan</p>
-            <span>$59.99/year</span>
+            <div>
+              <p>Annual Plan</p>
+              <span>$59.99/year</span>
+            </div>
           </div>
           <a href="#">Change</a>
         </div>
-        <a href="#" class="btn">Proceed to Payment</a>
+
+        <div class="btn"><a href="#">Proceed to Payment</a></div>
         <a href="#">Cancel Order</a>
       </div>
     </div>
