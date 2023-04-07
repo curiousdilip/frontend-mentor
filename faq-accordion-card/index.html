@@ -14,40 +14,113 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    :root {
+      --soft-violet: hsl(273, 75%, 66%);
+      --soft-blue: hsl(240, 73%, 65%);
+      --very-dark-grayish-blue: hsl(237, 12%, 33%);
+      --dark-grayish-blue: hsl(240, 6%, 50%);
+      --light-grayish-blue: hsl(240, 5%, 91%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      /* height: 100vh; */
+      font-family: 'Kumbh Sans', sans-serif;
+      background-color: var(--soft-violet);
+    }
+
+    main {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+    }
+
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 57.5rem;
+      background-color: var(--light-grayish-blue);
+
+    }
+
+    .box .left {
+      width: 50%;
+      background: url('./images/bg-pattern-desktop.svg');
+      background-position: left center;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .box .right {
+      width: 50%;
+    }
+
     .attribution {
       font-size: 11px;
       text-align: center;
-      font-family: 'Kumbh Sans', sans-serif;
+
     }
 
     .attribution a {
       color: hsl(228, 45%, 44%);
     }
+
+    footer {
+      position: absolute;
+      width: 100%;
+      bottom: 12px;
+    }
   </style>
 </head>
 
 <body>
-  How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on
-  team members for the Premium plan.
+  <main>
+    <section>
+      <div class="box">
+        <div class="left">
+          <img src="./images/illustration-box-desktop.svg" alt="">
+          <img src="./images/illustration-woman-online-desktop.svg" alt="">
+          <img src="./images/bg-pattern-desktop.svg" alt="">
+        </div>
+        <div class="right">
+          How many team members can I invite?
+          You can invite up to 2 additional users on the Free plan. There is no limit on
+          team members for the Premium plan.
 
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
+          What is the maximum file upload size?
+          No more than 2GB. All files in your account must fit your allotted storage space.
 
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
+          How do I reset my password?
+          Click “Forgot password” from the login page or “Change password” from your profile page.
+          A reset link will be emailed to you.
 
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
+          Can I cancel my subscription?
+          Yes! Send us a message and we’ll process your request no questions asked.
 
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
+          Do you provide additional support?
+          Chat and email support is available 24/7. Phone lines are open during normal business hours.
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.dilipmaurya.in">Dilip Kumar Maurya</a>.
+    </div>
+  </footer>
 </body>
 
 </html>
