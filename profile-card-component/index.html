@@ -7,11 +7,18 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
 
   <title>Frontend Mentor | Profile card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     :root {
       --dark-cyan: hsl(185, 75%, 39%);
       --very-dark-desaturated-blue: hsl(229, 23%, 23%);
@@ -19,9 +26,100 @@
       --dark-gray: hsl(0, 0%, 59%);
     }
 
+    body {
+      font-family: 'Kumbh Sans', sans-serif;
+      background: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+      background-position: right 52vw bottom 35vh, left 48vw top 52vh;
+      background-repeat: no-repeat, no-repeat;
+      background-color: var(--dark-cyan);
+    }
+
+
+    main {
+      display: grid;
+      min-height: 100vh;
+      place-items: center;
+    }
+
+    .box {
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .box .img-container {
+      background: url("./images/bg-pattern-card.svg");
+      background-size: cover;
+      width: 350px;
+      height: 140px;
+      position: relative;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+
+    }
+
+    .box .img-container img {
+      position: absolute;
+      bottom: -35%;
+      left: 36%;
+      border-radius: 50%;
+      border: 4px solid white;
+    }
+
+    .box .content {
+      padding-top: 77px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--dark-gray);
+
+    }
+
+    .box .content h1 {
+      font-weight: 700;
+      color: var(--very-dark-desaturated-blue);
+    }
+
+    .box .content .name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box .content .name span {
+      font-weight: 400px;
+      margin-left: 10px;
+      color: var(--dark-grayish-blue);
+    }
+
+    .box .content p {
+      font-weight: 400px;
+      margin-top: 15px;
+      color: var(--dark-grayish-blue);
+    }
+
+    .box .stat h2 {
+      font-weight: 700;
+      color: var(--very-dark-desaturated-blue);
+    }
+
+    .box .stat h6 {
+      font-weight: 300px;
+      color: var(--dark-grayish-blue);
+    }
+
+    .box .stat {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 30px 12px;
+    }
+
     .attribution {
       font-size: 11px;
       text-align: center;
+      position: absolute;
+      width: 100%;
+      bottom: 12px;
     }
 
     .attribution a {
@@ -31,21 +129,46 @@
 </head>
 
 <body>
-  Victor Crest
-  26
-  London
+  <main>
+    <section>
+      <div class="box">
+        <div class="img-container">
+          <img src="./images/image-victor.jpg" alt="">
+        </div>
+        <div class="content">
+          <div class="name">
+            <h1>Victor Crest </h1><span>26</span>
+          </div>
+          <p>London</p>
+        </div>
+        <div class="stat">
+          <div class="follow">
+            <h2>80K</h2>
+            <h6>Followers</h6>
+          </div>
 
-  80K
-  Followers
+          <div class="likes">
+            <h2>803K</h2>
+            <h6>Likes</h6>
+          </div>
+          <div class="photos">
+            <h2> 1.4K</h2>
+            <h6>Photos</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  803K
-  Likes
 
-  1.4K
-  Photos
+
+
+
+
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://www.dilipmaurya.in">Dilip Kumar Maurya</a>.
   </div>
 </body>
 
