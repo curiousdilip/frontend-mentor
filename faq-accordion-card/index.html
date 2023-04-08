@@ -12,115 +12,376 @@
 
   <title>Frontend Mentor | FAQ Accordion Card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     :root {
+      --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+      --soft-red: hsl(14, 88%, 65%);
+
       --soft-violet: hsl(273, 75%, 66%);
       --soft-blue: hsl(240, 73%, 65%);
+
       --very-dark-grayish-blue: hsl(237, 12%, 33%);
       --dark-grayish-blue: hsl(240, 6%, 50%);
+
       --light-grayish-blue: hsl(240, 5%, 91%);
     }
 
     * {
-      margin: 0;
       padding: 0;
+      margin: 0;
       box-sizing: border-box;
+      border: 0px solid grey;
     }
 
     body {
-      /* height: 100vh; */
       font-family: 'Kumbh Sans', sans-serif;
-      background-color: var(--soft-violet);
-    }
-
-    main {
+      background: linear-gradient(0deg, var(--soft-blue), var(--soft-violet)) no-repeat;
       display: grid;
       place-items: center;
       min-height: 100vh;
     }
 
-    .box {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 57.5rem;
-      background-color: var(--light-grayish-blue);
+    main {
+      text-rendering: optimizeSpeed;
+      border-radius: 20px;
+      background: white;
+      color: var(--dark-grayish-blue);
+      width: 92%;
+      min-height: 60vh;
+      max-height: max-content;
+      font-size: .8rem;
+      display: grid;
+      place-items: center;
+      padding-bottom: 50px;
+      position: relative;
+      padding-top: 1em;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, .1), 0 40px 40px rgba(0, 0, 0, .2);
+      margin-top: 3em;
+    }
+
+    .main-heading {
+      color: var(--very-dark-desaturated-blue);
+      font-size: 1.9rem;
+    }
+
+    abbr[title] {
+      text-decoration: none;
+    }
+
+    main::before {
+      content: '';
+      top: -115px;
+      left: calc(50% - 125px);
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      background-image: url('./images/illustration-woman-online-mobile.svg'), url('./images/bg-pattern-mobile.svg');
+      background-repeat: no-repeat, no-repeat;
+      background-position: center top, center top 120px;
 
     }
 
-    .box .left {
-      width: 50%;
-      background: url('./images/bg-pattern-desktop.svg');
-      background-position: left center;
-      background-size: cover;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
+    .main-faq-block {
+      all: unset;
+      width: 90%;
+      border-bottom: 1px solid var(--light-grayish-blue);
+      height: 50px;
+      display: grid;
+      place-items: center;
+      justify-items: normal;
+      position: relative;
+      transition: all .7s ease;
     }
 
-    .box .right {
-      width: 50%;
+    .main-question::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      background-image: url(./images/icon-arrow-down.svg);
+      width: 20px;
+      height: 20px;
+      background-size: 55%;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: .6s ease;
+      cursor: pointer;
+      margin-top: -.1em;
+      top: 1.25em;
+      right: .2em;
+    }
+
+    summary::marker {
+      content: "";
+    }
+
+    .main-faq-block {
+      margin: 0;
+      height: max-content;
+      padding: 1.155em 0;
+    }
+
+    details[open] .main-faq-block {
+      padding: 3px 0;
+      height: 100px;
+    }
+
+    details[open] .main-question {
+      font-weight: 600;
+      color: var(--very-dark-desaturated-blue);
+    }
+
+    details[open] .main-answer {
+      margin-top: .7em;
+    }
+
+
+
+    [open] .main-question::after {
+      transform: rotate(-180deg);
+      top: 1.1em;
+      right: .2em;
+    }
+
+    summary:focus-visible {
+      outline: .15em dotted #111;
+      outline-offset: .4em
+    }
+
+    .main-question {
+      cursor: pointer;
+    }
+
+    .main-question:hover {
+      color: var(--soft-red);
+    }
+
+    .main-faq-section {
+      width: 90%;
+      display: grid;
+      place-items: center;
+      position: relative;
+    }
+
+    .main-faq-block:first-of-type {
+      margin-top: 16em;
+    }
+
+    .main-heading {
+      position: absolute;
+      top: 4.75em;
     }
 
     .attribution {
-      font-size: 11px;
-      text-align: center;
-
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-
-    footer {
-      position: absolute;
       width: 100%;
+      text-align: center;
+      position: absolute;
       bottom: 12px;
+    }
+
+
+    .attribution,
+    a {
+      transition: .5s ease;
+      color: #f7f7f7;
+    }
+
+
+
+    @media (max-width: 375px) {
+      body {
+        padding-top: 6em;
+        padding-bottom: 3.5em;
+      }
+    }
+
+    @media (min-width: 35.75em) {
+      main {
+        width: 32em;
+      }
+
+      main::before {
+        top: -155px;
+        left: calc(50% - 175px);
+        width: 350px;
+        height: 350px;
+        background-position: center top, center top 160px;
+        background-size: 95%, 95%;
+      }
+
+      .attribution {
+        font-size: .95rem;
+      }
+
+    }
+
+    @media (min-width: 56.25em) {
+
+      main {
+        width: 71.95em;
+        grid-template-columns: 1fr 1fr;
+        min-height: unset;
+        max-height: unset;
+        height: 39.75em;
+        padding: 0;
+        margin-left: 3.2em;
+        border-radius: 23px;
+        position: relative;
+        margin-top: 0;
+        justify-items: start;
+      }
+
+      main::before {
+        content: '';
+        width: 100px;
+        height: 200px;
+        z-index: 2;
+        background-image: url(./images/illustration-box-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: unset;
+        position: absolute;
+        left: -3.6em;
+        top: 15.4em;
+        filter: drop-shadow(0 13px 15px rgba(0, 0, 0, .3));
+      }
+
+      .main-illustration {
+        width: 100%;
+        height: 100%;
+        background-image: url('./images/illustration-woman-online-desktop.svg'), url('./images/bg-pattern-desktop.svg');
+        background-repeat: no-repeat, no-repeat;
+        background-position: 710% 52%, 122% 62%;
+        background-size: 102.5%, 170%;
+        margin-bottom: 1.15em;
+      }
+
+      .main-heading,
+      .main-faq-block {
+        grid-column: 2/-1;
+      }
+
+      .main-faq-section {
+        grid-column: 2;
+        padding: 0 17.5px;
+        margin-top: 1em;
+        width: 31em;
+        padding-bottom: .3em;
+        position: static;
+        justify-items: start;
+      }
+
+      .main-faq-block {
+        width: 94%;
+        font-size: .88rem;
+      }
+
+      .main-heading {
+        margin: 0;
+        align-self: flex-start;
+        justify-self: flex-start;
+        font-size: 1.9rem;
+        position: absolute;
+        top: 2.10em;
+        left: .55em;
+      }
+
+      .main-dropdown-arrow-btn {
+        width: 17px;
+        height: 17px;
+        margin-top: .15em;
+        margin-right: .2em;
+      }
+
+      .main-faq-block:first-of-type {
+        margin-top: 2.2em;
+      }
+
+      .main-answer {
+        margin-top: -2.9em;
+        font-size: .757rem;
+        line-height: 1.5em;
+        margin-left: -.1em;
+      }
+
+      .attribution a:hover {
+        color: white;
+      }
     }
   </style>
 </head>
 
 <body>
-  <main>
-    <section>
-      <div class="box">
-        <div class="left">
-          <img src="./images/illustration-box-desktop.svg" alt="">
-          <img src="./images/illustration-woman-online-desktop.svg" alt="">
-          <img src="./images/bg-pattern-desktop.svg" alt="">
-        </div>
-        <div class="right">
-          How many team members can I invite?
+  <main class="fade-in-animation">
+    <div class="main-illustration"></div>
+
+    <div class="main-faq-section">
+      <h1 class="main-heading">
+        <abbr title="Frequently Asked Questions" aria-label="Frequently Asked Questions">FAQ</abbr>
+      </h1>
+
+      <details class="main-faq-block">
+        <summary class="main-question">How many team members can I invite?</summary>
+
+        <p class="main-answer">
           You can invite up to 2 additional users on the Free plan. There is no limit on
           team members for the Premium plan.
+        </p>
+      </details>
 
-          What is the maximum file upload size?
+      <details class="main-faq-block" open="">
+        <summary class="main-question">What is the maximum file upload size?</summary>
+
+        <p class="main-answer">
           No more than 2GB. All files in your account must fit your allotted storage space.
+        </p>
+      </details>
 
-          How do I reset my password?
+      <details class="main-faq-block">
+        <summary class="main-question">How do I reset my password?</summary>
+
+        <p class="main-answer">
           Click “Forgot password” from the login page or “Change password” from your profile page.
-          A reset link will be emailed to you.
+        </p>
+      </details>
 
-          Can I cancel my subscription?
+      <details class="main-faq-block">
+        <summary class="main-question">Can I cancel my subscription?</summary>
+
+        <p class="main-answer">
           Yes! Send us a message and we’ll process your request no questions asked.
+        </p>
+      </details>
 
-          Do you provide additional support?
+      <details class="main-faq-block">
+        <summary class="main-question">Do you provide additional support?</summary>
+
+        <p class="main-answer">
           Chat and email support is available 24/7. Phone lines are open during normal business hours.
-        </div>
-      </div>
-    </section>
+        </p>
+      </details>
+
+    </div>
   </main>
 
-
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://www.dilipmaurya.in">Dilip Kumar Maurya</a>.
-    </div>
+  <footer class="attribution">
+    Challenge by
+    <a class="attribution-link" href="https://www.frontendmentor.io/" target="_blank">Frontend Mentor</a>, Coded by
+    <a class="attribution-link" href="https://www.dilipmaurya.in">Dilip Kumar Maurya</a>
   </footer>
+
+  <script defer>
+    const dropDownElements = document.querySelectorAll('.main-question');
+
+    dropDownElements.forEach((el) => {
+      el.addEventListener('click', (e) => {
+        if (e.target.parentElement.open == true) return e.target.parentElement = false
+
+        dropDownElements.forEach(element => element.parentElement.open = false)
+
+        e.target.parentElement.open = false
+      })
+    })
+  </script>
 </body>
 
 </html>
