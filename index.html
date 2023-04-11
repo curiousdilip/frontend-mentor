@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./notifications-page/assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Frontend Projects</title>
+    <style>
+        :root {
+            --svelte-flair: hsl(14, 100%, 50%);
+            --vue-flair: hsl(153, 48%, 46%);
+            --javascript: hsl(54, 83%, 51%);
+            --css-flair: hsl(205, 79%, 38%);
+            --html-flair: hsl(13, 71%, 49%);
+            --border-radius: 6px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: var(--main-bg);
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+
+            --main-bg: #e9e5e2;
+            --card-bg: #f4f2f1;
+            --title: #000000;
+            --content: #605e5c;
+            --darker-primary: #106ebe;
+            --primary: #0078d7;
+            --box-shadow: 0 5px 15px 0 rgba(19, 19, 19, 0.1);
+        }
+
+        .ribbon {
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 99;
+        }
+
+        body.dark {
+            --card-bg: rgba(25, 25, 25, 0.5);
+            --main-bg: #292827;
+
+            --title: #edebe9;
+            --content: #bebbb8;
+
+            --darker-primary: #106ebe;
+            --primary: #0078d7;
+            --box-shadow: 0 5px 15px 0 rgba(19, 19, 19, 0.5);
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navbar {
+            display: flex;
+            padding: 1em;
+            justify-content: space-between;
+            border-bottom: 2px solid var(--darker-primary);
+            background: var(--card-bg);
+            align-items: center;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            overflow-x: hidden;
+            margin-block: 2em;
+            width: 99%;
+            gap: 1.5em;
+        }
+
+        .navbar h1 {
+            color: var(--title);
+            margin-left: 0.5em;
+        }
+
+        .type-title {
+            margin-top: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--content);
+            font-size: 2em;
+            margin-right: 20px;
+            opacity: 0.6;
+        }
+
+        .theme-toggle {
+            margin-right: 20px;
+            opacity: 0.6;
+            background: none;
+            color: var(--content);
+            font-size: 2em;
+            border: none;
+            cursor: pointer;
+        }
+
+        .flair {
+            background: var(--main-bg);
+            border-radius: 10%;
+            padding: 3px 4px;
+            color: var(--content);
+            font-size: 0.8em;
+        }
+
+        .card-labels {
+            font-size: 15px;
+            padding-top: 0.5em;
+            display: flex;
+            column-gap: 1em;
+            row-gap: 0.5em;
+            align-items: center;
+            user-select: none;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: var(--card-bg);
+            min-width: 0px;
+            border-radius: var(--border-radius);
+            transition: box-shadow 0.5s ease-in, transform 0.1s ease-in;
+        }
+
+        @media (hover: hover) {
+            .card:hover {
+                box-shadow: var(--box-shadow);
+                transform: translateY(-2%);
+            }
+
+            .nav-links button:hover {
+                opacity: 1;
+            }
+
+            .nav-links a:hover {
+                opacity: 1;
+            }
+        }
+
+        .card img {
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            filter: brightness(90%);
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            padding: 1em 1em 0.5em 1em;
+        }
+
+        .card-title {
+            color: var(--title);
+            font-size: 1.4em;
+
+        }
+
+        .card-body {
+            color: var(--content);
+        }
+
+        .card-img {
+            width: 100%;
+        }
+
+        .card-img>img {
+            width: 100%;
+        }
+
+        .card-links {
+            margin: 1em 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            align-items: center;
+            transition: transform 200ms ease;
+        }
+
+        .card-links a:active {
+            transform: scale(0.95);
+        }
+
+        .card-links a {
+            border-radius: var(--border-radius);
+            width: 100%;
+            text-align: center;
+            color: white;
+            padding: 0.5em 0;
+            background-color: var(--primary);
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .card-links a:hover {
+            background: var(--darker-primary);
+        }
+
+        a.github-card {
+            background-color: #eb4747;
+        }
+
+        a.github-card:hover {
+            background: #e53333;
+        }
+
+        .card-container a.github-card::after {
+            content: "\f113";
+            font: normal normal normal 14px/1 FontAwesome;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+
+        .card-container a.live-url-card::after {
+            content: "\f08e";
+            font: normal normal normal 11px/1 FontAwesome;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .card-container {
+                grid-template-columns: repeat(3, 1fr);
+                width: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 900px) {
+            .card-container {
+                grid-template-columns: repeat(2, 1fr);
+
+                width: 90%;
+            }
+
+            .navbar {
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+
+            .card-title {
+                font-size: 1.2em;
+            }
+
+            .card-links {
+                font-size: 1em;
+            }
+
+            .navbar {
+                padding: 1em 0.5em;
+                text-align: center;
+            }
+
+            .nav-links a {
+                font-size: 1.5em;
+                margin: 0;
+            }
+
+            .theme-toggle {
+                margin: 0;
+                font-size: 1.5em;
+            }
+
+            .navbar h1 {
+                font-size: 1.5em;
+                margin: 10px 0;
+            }
+
+            .nav-links {
+                display: flex;
+                justify-content: space-between;
+                gap: 1.5em;
+            }
+
+            .card-labels {
+                font-size: 0.9em;
+            }
+
+            .card-content {
+                display: flex;
+                flex-direction: column;
+                padding: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1 class="nav-title">Frontend Projects</h1>
+        <ul class="nav-links">
+            <button class="theme-toggle" href="" id="toggle">
+                <i class="fas" id="themeIcon"></i>
+            </button>
+
+            <a class="github" href="https://github.com/curiousdilip" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a class="twitter" href="https://twitter.com/curiousdilip" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a class="linkedin" href="https://linkedin.com/in/curiousdilip" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </ul>
+    </nav>
+    <h1 class="type-title">Newbie Projects</h1>
+
+    <div class="card-container">
+        <div class="card">
+            <div class="card-img">
+                <img src="./results-summary-component/design/desktop-design.jpg" alt="" />
+            </div>
+            <div class="card-content">
+                <h1 class="card-title">Results summary component</h1>
+                <div class="card-labels">
+                    <span class="flair">HTML</span>
+
+                    <span class="flair">CSS</span>
+                </div>
+                <div class="card-links">
+                    <a target="_blank" class="live-url-card" href="./results-summary-component/index.html">Live url</a>
+
+                    <a target="_blank" class="github-card"
+                        href="https://github.com/curiousdilip/frontend-mentor/tree/main/results-summary-component">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+        const themeToggle = document.getElementById("toggle");
+        const icon = document.getElementById("themeIcon");
+        const target = document.getElementsByTagName("body")[0];
+        const theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        target.classList.toggle(theme);
+        const innerIcon = theme === "dark" ? "fa-sun" : "fa-moon";
+        icon.classList.add(innerIcon);
+        themeToggle.addEventListener("click", () => {
+            const currentIcon = icon.classList.contains("fa-sun")
+                ? "fa-sun"
+                : "fa-moon";
+            const altIcon = currentIcon === "fa-sun" ? "fa-moon" : "fa-sun";
+
+            target.classList.toggle("dark");
+
+            icon.classList.remove(currentIcon);
+            icon.classList.add(altIcon);
+        });
+    </script>
+</body>
+
+</html>
