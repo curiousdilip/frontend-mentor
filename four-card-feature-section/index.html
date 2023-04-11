@@ -4,33 +4,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
-  <title>Frontend Mentor | Four card feature section</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <title>Four card feature section</title>
   <style>
-    :root {
-      --red: hsl(0, 78%, 62%);
-      --cyan: hsl(180, 62%, 55%);
-      --orange: hsl(34, 97%, 64%);
-      --blue: hsl(212, 86%, 64%);
-      --very-dark-blue: hsl(234, 12%, 34%);
-      --grayish-blue: hsl(229, 6%, 66%);
-      --very-light-gray: hsl(0, 0%, 98%);
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      color: hsl(234, 12%, 34%);
+      background-color: hsl(0, 0%, 98%)
+    }
+
+    header {
+      margin: 50px auto;
+      max-width: 550px;
+      text-align: center;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 35px;
+    }
+
+    .low-weight {
+      font-weight: 200;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 21px;
+    }
+
+    header p {
+      color: hsl(229, 6%, 66%);
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    p {
+      color: hsl(229, 6%, 66%);
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: 9px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 1140px;
+    }
+
+    .card {
+      background-color: white;
+      box-shadow: 0 4px 15px 2px rgba(0, 0, 0, 0.2);
+      border-radius: 7px;
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+      margin: 15px;
+      width: 350px;
+      max-width: 1120px;
+    }
+
+    .left-card,
+    .right-card {
+      transform: translateY(50%);
+    }
+
+    .image {
+      padding-top: 2rem;
+      float: right;
+    }
+
+    .left-card {
+      border-top: 4px solid hsl(180, 62%, 55%);
+    }
+
+    .top-center-card {
+      border-top: 4px solid hsl(0, 78%, 62%);
+    }
+
+    .low-center-card {
+      border-top: 4px solid hsl(34, 97%, 64%);
+    }
+
+    .right-card {
+      border-top: 4px solid hsl(212, 86%, 64%);
+    }
+
+    @media (max-width: 775px) {
+
+      .left-card,
+      .right-card {
+        transform: translateY(0);
+      }
     }
 
     .attribution {
       font-size: 11px;
       text-align: center;
+      position: fixed;
+      bottom: 12px;
+      width: 100%;
     }
 
     .attribution a {
@@ -41,39 +125,40 @@
 
 <body>
   <main>
+    <header>
+      <h1 class="low-weight">
+        Reliable, efficient delivery</h1>
+
+      <h1>Powered by Technology</h1>
+
+      <p>Our Artificial Intelligence powered tools use millions of
+        project data points to ensure that your project is successful</p>
+    </header>
+
     <section>
-      <h1>Reliable, efficient delivery</h1>
-      <h2>Powered by Technology</h2>
-      <p> Our Artificial Intelligence powered tools use millions of project data points
-        to ensure that your project is successful</p>
-      <div class="box-container">
-        <div class="box supervisor">
-          <h3>Supervisor</h3>
+      <div class="container">
+        <div class="card left-card">
+          <h2>Supervisor</h2>
           <p>Monitors activity to identify project roadblocks</p>
-          <div class="img-container">
-            <img src="./images/icon-supervisor.svg" alt="">
-          </div>
+          <img class="image" src="images/icon-supervisor.svg" alt="icon supervisor">
         </div>
-        <div class="box team">
-          <h3> Team Builder</h3>
+
+        <div class="card top-center-card">
+          <h2>Team Builder</h2>
           <p>Scans our talent network to create the optimal team for your project</p>
-          <div class="img-container">
-            <img src="./images/icon-team-builder.svg" alt="">
-          </div>
+          <img class="image" src="images/icon-team-builder.svg" alt="icon team builder">
         </div>
-        <div class="box  karma">
-          <h3> Karma</h3>
-          <p> Regularly evaluates our talent to ensure quality</p>
-          <div class="img-container">
-            <img src="./images/icon-karma.svg" alt="">
-          </div>
+
+        <div class="card right-card">
+          <h2>Calculator</h2>
+          <p>Uses data from past projects to provide better delivery estimates</p>
+          <img class="image" src="images/icon-calculator.svg" alt="icon calculator">
         </div>
-        <div class="box calculator">
-          <h3>Calculator</h3>
-          <p> Uses data from past projects to provide better delivery estimates</p>
-          <div class="img-container">
-            <img src="./images/icon-calculator.svg" alt="">
-          </div>
+
+        <div class="card low-center-card">
+          <h2>Karma</h2>
+          <p>Regularly evaluates our talent to ensure quality</p>
+          <img class="image" src="images/icon-karma.svg" alt="icon karma">
         </div>
       </div>
     </section>
