@@ -36,6 +36,7 @@
       background-position: left top, right bottom;
       background-repeat: no-repeat, no-repeat;
       height: 100vh;
+      font-size: 15px;
     }
 
     main {
@@ -44,6 +45,51 @@
       min-height: 100vh;
     }
 
+    .container {
+      display: flex;
+      width: 100%;
+    }
+
+    .container .left-side {
+      /* width: 30%; */
+    }
+
+    .container .left-side h1 {
+      color: var(--very-dark-magenta);
+      font-size: 50px;
+      font-weight: 700;
+    }
+
+    .container .left-side p {
+      color: var(--dark-grayish-magenta);
+      font-size: 20px;
+      margin-top: 30px;
+      margin-bottom: 76px;
+    }
+
+    .container .right-side {
+      /* width: 50%;
+      display: block; */
+    }
+
+    .container .right-side .review-1,
+    .container .right-side .review-2,
+    .container .right-side .review-3 {
+      padding: 15px 40px;
+      border-radius: 10px;
+      background-color: var(--light-grayish-magenta);
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .container .right-side .review-2 {
+      margin-left: 40px;
+    }
+
+    .container .right-side .review-3 {
+      margin-left: 80px;
+    }
 
     .attribution {
       font-size: 11px;
