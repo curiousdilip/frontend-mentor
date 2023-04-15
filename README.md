@@ -4,7 +4,7 @@ This is the monorepo of Dilip's Frontend Mentor projects. **_[Here is the url to
 
 | Packages 📦  | Tooling 🛠️  |  Link 🔗|
 | ------------- | ----------- |---|
-| [Results summary component](./results-summary-component/)| ![html] ![css] |[Click](./results-summary-component/index.html)|
+| [Results summary component](./results-summary-component/)| ![html] ![css] |[Click](https://curiousdilip.github.io/frontend-mentor/results-summary-component/index.html)|
 | [Product preview card component](./product-preview-card-component/)| ![html] ![css] |
 | [Interactive rating component](./interactive-rating-component/)| ![html] ![css] |
 | [QR code component](./qr-code-component-main/)| ![html] ![css] |
