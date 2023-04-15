@@ -2,9 +2,9 @@
 
 This is the monorepo of Dilip's Frontend Mentor projects. **_[Here is the url to the dashboard](./site/index.html)_**
 
-| Packages 📦  | Tooling 🛠️  |  
-| ------------- | ----------- |
-| [Results summary component](./results-summary-component/)| ![html] ![css] |
+| Packages 📦  | Tooling 🛠️  |  Link 🔗|
+| ------------- | ----------- |---|
+| [Results summary component](./results-summary-component/)| ![html] ![css] |[Click](./results-summary-component/index.html)|
 | [Product preview card component](./product-preview-card-component/)| ![html] ![css] |
 | [Interactive rating component](./interactive-rating-component/)| ![html] ![css] |
 | [QR code component](./qr-code-component-main/)| ![html] ![css] |
