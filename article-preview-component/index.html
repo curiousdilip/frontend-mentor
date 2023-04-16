@@ -22,10 +22,100 @@
       --light-grayish-blue: hsl(210, 46%, 95%);
     }
 
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      font-size: 13px;
+    }
+
+    main {
+      background-color: var(--light-grayish-blue);
+
+    }
+
+    section {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+    }
+
+    .box {
+      display: flex;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 730px;
+    }
+
+    .box .left {
+      background: url("./images/drawers.jpg");
+      background-size: cover;
+      width: 285px;
+
+    }
+
+    /* .box .left img {
+      width: 280px;
+      border-radius: 10px;
+      height: 280px;
+    } */
+
+    .box .right {
+      padding: 40px;
+      width: 445px;
+    }
+
+    .box .right h1 {
+      color: var(--very-dark-grayish-blue);
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    .box .right p {
+      color: var(--grayish-blue);
+      font-weight: 500;
+      margin-top: 13px;
+      margin-bottom: 22px;
+    }
+
+    .box .right .container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .box .right .container .author {
+      display: flex;
+    }
+
+    .box .right .container .author img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 16px;
+    }
+
+    .box .right .container .author .name h4 {
+      color: var(--very-dark-grayish-blue);
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .box .right .container .author .name p {
+      color: var(--very-dark-grayish-blue);
+      margin: 0;
+    }
+
+
     .attribution {
       font-size: 11px;
       text-align: center;
-      font-family: 'Manrope', sans-serif;
+      position: fixed;
+      bottom: 12px;
+      width: 100%;
     }
 
     .attribution a {
@@ -36,18 +126,35 @@
 
 <body>
 
-  Shift the overall look and feel by adding these wonderful
-  touches to furniture in your home
-
-  Ever been in a room and felt like something was missing? Perhaps
-  it felt slightly bare and uninviting. I’ve got some simple tips
-  to help you make any room feel complete.
-
-  Michelle Appleton
-  28 Jun 2020
-
-  Share
-
+  <main>
+    <section>
+      <div class="box">
+        <div class="left">
+        </div>
+        <div class="right">
+          <h1>
+            Shift the overall look and feel by adding these wonderful
+            touches to furniture in your home
+          </h1>
+          <p>Ever been in a room and felt like something was missing? Perhaps
+            it felt slightly bare and uninviting. I’ve got some simple tips
+            to help you make any room feel complete.</p>
+          <div class="container">
+            <div class="author">
+              <img src="./images/avatar-michelle.jpg" alt="">
+              <div class="name">
+                <h4>Michelle Appleton</h4>
+                <p> 28 Jun 2020</p>
+              </div>
+            </div>
+            <div class="share">
+              <img src="./images/icon-share.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
