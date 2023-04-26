@@ -1,33 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Huddle landing page with single introductory section</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:ital,wght@0,600;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: hsl(257, 40%, 49%);
+    }
+
+    main {
+      background: url("./images/bg-desktop.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    section {
+      position: relative;
+      padding: 0 80px;
+    }
+
+    section .logo {
+      position: fixed;
+      top: 64px;
+      left: 80px;
+    }
+
+    section .social-links {
+      position: fixed;
+      bottom: 40px;
+      right: 80px;
+      display: flex;
+    }
+
+    section .social-links .facebook i,
+    section .social-links .instagram i,
+    section .social-links .twitter i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    section .social-links i {
+      margin-right: 16px;
+      width: 40px;
+      height: 40px;
+      border: 1px solid white;
+      border-radius: 50%;
+      color: white;
+    }
+
+    section .social-links .fa-instagram {
+      margin-right: 0;
+    }
+
+    section .container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    .container .left img {
+      width: 80%;
+    }
+
+    .container .left {
+
+      width: 50%;
+    }
+
+    .container .right {
+      width: 50%;
+    }
+
+    .container .right h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 30px;
+      color: white;
+      font-weight: 600;
+    }
+
+    .container .right p {
+      font-family: 'Open Sans', sans-serif;
+      margin-top: 44px;
+      margin-bottom: 24px;
+      line-height: 1.5;
+      font-size: 18px;
+      font-weight: 400;
+      color: white;
+    }
+
+    .container .right .btn {
+      padding: 12px 50px;
+      background-color: white;
+      display: inline-block;
+      border-radius: 30px;
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+
+    }
+
+    .container .right .btn a {
+      color: hsl(257, 40%, 49%);
+      font-family: 'Open Sans', sans-serif;
+      text-decoration: none;
+      font-weight: 400;
+    }
+
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      bottom: 12px;
+      font-family: 'Open Sans', sans-serif;
+      color: white;
+    }
+
+    .attribution a {
+      color: hsl(300, 69%, 71%);
+    }
   </style>
 </head>
+
 <body>
 
-  Build The Community Your Fans Will Love
+  <main>
+    <section>
+      <div class="logo">
+        <img src="./images/logo.svg" alt="">
+      </div>
+      <div class="container">
+        <div class="left">
+          <img src="./images/illustration-mockups.svg" alt="">
+        </div>
+        <div class="right">
+          <h1>Build The Community </br>Your Fans Will Love</h1>
+          <p>Huddle re-imagines the way we build communities. You have a voice, but so does your audience.
+            Create connections with your users as you engage in genuine discussion.</p>
+          <div class="btn"><a href="#">Register</a></div>
+        </div>
+      </div>
+      <div class="social-links">
+        <div class="facebook">
+          <i class="fa-brands fa-facebook-f"></i>
 
-  Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
-  Create connections with your users as you engage in genuine discussion. 
+        </div>
+        <div class="twitter"> <i class="fa-brands fa-twitter"></i></div>
 
-  Register
+        <div class="instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+
+
+
 
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.dilipmaurya.in">Dilip Kumar Maurya</a>.
     </p>
   </footer>
 </body>
+
 </html>
