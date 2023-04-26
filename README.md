@@ -14,6 +14,11 @@ This is the monorepo of Dilip's Frontend Mentor projects. **_[Here is the url to
 | [3-column preview card component](./3-column-preview-card-component/)| ![html] ![css] |[Click Here](https://curiousdilip.github.io/frontend-mentor/3-column-preview-card-component/index.html)|
 | [Profile card component](./profile-card-component/)| ![html] ![css] |[Click Here](https://curiousdilip.github.io/frontend-mentor/profile-card-component/index.html)|
 | [FAQ accordion card](./faq-accordion-card/)| ![html] ![css] ![javascript] |[Click Here](https://curiousdilip.github.io/frontend-mentor/faq-accordion-card/index.html)|
+| [Social proof section](./social-proof-section/)| ![html] ![css] |[Click Here](https://curiousdilip.github.io/frontend-mentor/social-proof-section/index.html)|
+| [Article preview component](./article-preview-component/)| ![html] ![css] ![javascript] |[Click Here](https://curiousdilip.github.io/frontend-mentor/article-preview-component/index.html)|
+| [Four card feature section](./four-card-feature-section/)| ![html] ![css] |[Click Here](https://curiousdilip.github.io/frontend-mentor/article-preview-component/index.html)|
+| [Single price grid component](./single-price-grid-component/)| ![html] ![css] |[Click Here](https://curiousdilip.github.io/frontend-mentor/single-price-grid-component/index.html)|
+| [Huddle landing page with a single introductory section](./huddle-landing-page-with-single-introductory-section/)| ![html] ![css] |[Click Here](https://curiousdilip.github.io/frontend-mentor/huddle-landing-page-with-single-introductory-section/index.html)|
 
 
 [javascript]: https://img.shields.io/badge/-JavaScript-282c34?logo=JavaScript&logocolor=F7DF1E&style=classic
