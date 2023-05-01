@@ -13,15 +13,20 @@ body {
 }
 body section .box-container {
   display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 body section .box-container .left {
   width: 60%;
-  padding-left: 165px;
-  padding-right: 220px;
+  padding-left: 10.3125rem;
+  padding-right: 13.75rem;
 }
-body section .box-container .left img {
+body section .box-container .left .logo {
   margin-top: 65px;
   margin-bottom: 140px;
+  position: fixed;
+  top: 0;
 }
 body section .box-container .left h1 {
   color: hsl(0, 6%, 24%);
@@ -51,6 +56,7 @@ body section .box-container .left form .form-group input {
   padding: 0.2rem 1.5rem;
   height: 100%;
   width: 100%;
+  position: relative;
 }
 body section .box-container .left form .form-group .icon-error {
   position: absolute;
@@ -73,7 +79,8 @@ body section .box-container .left form .form-group button {
 }
 body section .box-container .right {
   background: url("../images/hero-desktop.jpg");
-  width: 50%;
+  width: 40%;
+  height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
