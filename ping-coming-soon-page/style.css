@@ -19,6 +19,111 @@ body {
     font-family: 'Libre Franklin', sans-serif;
 }
 
+main {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+}
+
+section {
+    text-align: center;
+}
+
+section .container {
+    margin-top: 58px;
+    margin-bottom: 40px;
+}
+
+section .container h1 {
+    margin-bottom: 24px;
+    font-size: 3.4rem;
+    font-weight: 400;
+    color: var(--gray);
+}
+
+section .container p {
+    margin-bottom: 24px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--very-dark-blue);
+}
+
+section .container h1 span {
+    margin-bottom: 24px;
+    font-size: 3rem;
+    color: var(--very-dark-blue);
+    font-weight: 700;
+}
+
+section .form {
+    margin-bottom: 92px;
+}
+
+section .form input {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 30px;
+}
+
+section .form .form-btn {
+    border-radius: 30px;
+    border: none;
+    padding: 15px 40px;
+    background-color: var(--blue);
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+section .form input[type=email] {
+    width: 70%;
+    border: 1px solid var(--gray);
+}
+
+section .form .form-error {
+    margin: 0;
+    display: block;
+    font-style: italic;
+    text-align: center;
+    color: var(--light-red);
+}
+
+section .form .form-error .form-btn {
+    transform: translateY(2rem);
+}
+
+section .img-box {
+    margin-bottom: 70px;
+}
+
+section .social-icons {
+    margin-bottom: 26px;
+}
+
+section .social-icons a {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    margin-right: 12px;
+    color: var(--blue);
+}
+
+section .social-icons i {
+
+    border: 1px solid var(--gray);
+    padding-top: 6px;
+    font-size: 1rem;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+section .copyright p {
+    color: var(--gray);
+    font-size: 1rem;
+
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;

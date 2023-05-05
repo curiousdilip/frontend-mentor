@@ -23,24 +23,23 @@
         <img src="./images/logo.svg" alt="">
       </div>
       <div class="container">
-        <h1>We are launching soon!</h1>
+        <h1>We are launching <span>soon!</span> </h1>
         <p>Subscribe and get notified</p>
       </div>
 
-      <div class="form">
-        <form action="">
-          <input type="email" placeholder="Your Email Address...">
-          <input type="submit" value="Notify Me">
-        </form>
-      </div>
+      <form action="" class="form" novalidate="ture">
+        <input class="form-input" type="email" placeholder="Your Email Address..."
+          pattern="^([A-Za-z\d.-]+)@([a-z\d]+)(\.[a-z]{2,24}){1,8}$" required>
+        <button class="form-btn">Notify Me</button>
+      </form>
 
       <div class="img-box">
         <img src="./images/illustration-dashboard.png" alt="" style="width:644px; height: 360px;">
       </div>
       <div class=" social-icons">
-        <i class="fa-brands fa-facebook-f"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-instagram"></i>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
       </div>
 
       <div class="copyright">
@@ -49,12 +48,7 @@
     </section>
   </main>
 
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://www.dilipmaurya.in">Dilip Kumar Maurya</a>.
-    </p>
-  </footer>
+  <script src="./app.js"></script>
 </body>
 
 </html>
