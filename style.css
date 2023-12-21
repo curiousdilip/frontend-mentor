@@ -229,6 +229,15 @@ a.github-card:hover {
         grid-template-columns: repeat(3, 1fr);
         width: 90%;
     }
+
+    .navbar h1 {
+        color: var(--title);
+        margin: 0;
+        margin-bottom: 0.5em;
+
+    }
+
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -236,6 +245,11 @@ a.github-card:hover {
         grid-template-columns: repeat(2, 1fr);
 
         width: 90%;
+    }
+
+    .navbar h1 {
+        color: var(--title);
+        margin-bottom: 0.5em;
     }
 
     .navbar {
