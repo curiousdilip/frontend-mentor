@@ -10,7 +10,8 @@
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Frontend Projects</title>
-    <style>
+    <link rel="stylesheet" href="style.css">
+    <!-- <style>
         :root {
             --svelte-flair: hsl(14, 100%, 50%);
             --vue-flair: hsl(153, 48%, 46%);
@@ -76,12 +77,14 @@
             overflow: hidden;
         }
 
-        .card-container {
+        #card-container {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             overflow-x: hidden;
             margin-block: 2em;
-            width: 99%;
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 40px;
             gap: 1.5em;
         }
 
@@ -220,14 +223,14 @@
             background: #e53333;
         }
 
-        .card-container a.github-card::after {
+        #card-container a.github-card::after {
             content: "\f113";
             font: normal normal normal 14px/1 FontAwesome;
             text-decoration: none;
             margin-left: 5px;
         }
 
-        .card-container a.live-url-card::after {
+        #card-container a.live-url-card::after {
             content: "\f08e";
             font: normal normal normal 11px/1 FontAwesome;
             text-decoration: none;
@@ -235,16 +238,15 @@
         }
 
         @media screen and (max-width: 1200px) {
-            .card-container {
+            #card-container {
                 grid-template-columns: repeat(3, 1fr);
                 width: 90%;
             }
         }
 
         @media only screen and (max-width: 900px) {
-            .card-container {
+            #card-container {
                 grid-template-columns: repeat(2, 1fr);
-
                 width: 90%;
             }
 
@@ -255,7 +257,7 @@
         }
 
         @media only screen and (max-width: 600px) {
-            .card-container {
+            #card-container {
                 grid-template-columns: 1fr;
             }
 
@@ -303,7 +305,7 @@
                 padding: 1em;
             }
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
@@ -327,319 +329,10 @@
         </ul>
     </nav>
     <h1 class="type-title">Newbie Projects</h1>
+    <div id="card-container">
 
-    <div class="card-container">
-        <div class="card">
-            <div class="card-img">
-                <img src="../results-summary-component/design/desktop-preview.jpg" alt="" />
-            </div>
-            <div class="card-content">
-                <h1 class="card-title">Results summary component</h1>
-                <div class="card-labels">
-                    <span class="flair">HTML</span>
-
-                    <span class="flair">CSS</span>
-                </div>
-                <div class="card-links">
-                    <a target="_blank" class="live-url-card" href="../results-summary-component/index.html">Live url</a>
-
-                    <a target="_blank" class="github-card"
-                        href="https://github.com/curiousdilip/frontend-mentor/tree/main/results-summary-component">GitHub</a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="../product-preview-card-component/design/desktop-preview.jpg" alt="" />
-            </div>
-            <div class="card-content">
-                <h1 class="card-title">Product preview card component</h1>
-                <div class="card-labels">
-                    <span class="flair">HTML</span>
-
-                    <span class="flair">CSS</span>
-                </div>
-                <div class="card-links">
-                    <a target="_blank" class="live-url-card" href="../product-preview-card-component/index.html">Live
-                        url</a>
-
-                    <a target="_blank" class="github-card"
-                        href="https://github.com/curiousdilip/frontend-mentor/tree/main/product-preview-card-component">GitHub</a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="../interactive-rating-component/design//desktop-preview.jpg" alt="" />
-            </div>
-            <div class="card-content">
-                <h1 class="card-title">Interactive rating component</h1>
-                <div class="card-labels">
-                    <span class="flair">HTML</span>
-
-                    <span class="flair">CSS</span>
-                    <span class="flair">JS</span>
-                </div>
-                <div class="card-links">
-                    <a target="_blank" class="live-url-card" href="../interactive-rating-component/index.html">Live
-                        url</a>
-
-                    <a target="_blank" class="github-card"
-                        href="https://github.com/curiousdilip/frontend-mentor/tree/main/interactive-rating-component">GitHub</a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="../qr-code-component-main/design/desktop-preview.jpg" alt="" />
-            </div>
-            <div class="card-content">
-                <h1 class="card-title">Interactive rating component</h1>
-                <div class="card-labels">
-                    <span class="flair">HTML</span>
-
-                    <span class="flair">CSS</span>
-                </div>
-                <div class="card-links">
-                    <a target="_blank" class="live-url-card" href="../qr-code-component-main/index.html">Live
-                        url</a>
-
-                    <a target="_blank" class="github-card"
-                        href="https://github.com/curiousdilip/frontend-mentor/tree/main/qr-code-component-main">GitHub</a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="../nft-preview-card-component/design/desktop-preview.jpg" alt="" />
-            </div>
-            <div class="card-content">
-                <h1 class="card-title">NFT preview card component</h1>
-                <div class="card-labels">
-                    <span class="flair">HTML</span>
-
-                    <span class="flair">CSS</span>
-                    <span class="flair">JS</span>
-                </div>
-                <div class="card-links">
-                    <a target="_blank" class="live-url-card" href="../nft-preview-card-component/index.html">Live
-                        url</a>
-
-                    <a target="_blank" class="github-card"
-                        href="https://github.com/curiousdilip/frontend-mentor/tree/main/nft-preview-card-component">GitHub</a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="../order-summary-component/design/desktop-preview.jpg" alt="" />
-            </div>
-            <div class="card-content">
-                <h1 class="card-title">Order summary component</h1>
-                <div class="card-labels">
-                    <span class="flair">HTML</span>
-
-                    <span class="flair">CSS</span>
-                </div>
-                <div class="card-links">
-                    <a target="_blank" class="live-url-card" href="../order-summary-component/index.html">Live
-                        url</a>
-
-                    <a target="_blank" class="github-card"
-                        href="https://github.com/curiousdilip/frontend-mentor/tree/main/order-summary-component">GitHub</a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="../stats-preview-card-component/design/desktop-preview.jpg" alt="" />
-            </div>
-            <div class="card-content">
-                <h1 class="card-title">Stats preview card component</h1>
-                <div class="card-labels">
-                    <span class="flair">HTML</span>
-
-                    <span class="flair">CSS</span>
-                </div>
-                <div class="card-links">
-                    <a target="_blank" class="live-url-card" href="../stats-preview-card-component/index.html">Live
-                        url</a>
-
-                    <a target="_blank" class="github-card"
-                        href="https://github.com/curiousdilip/frontend-mentor/tree/main/stats-preview-card-component">GitHub</a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="../3-column-preview-card-component/design/desktop-preview.jpg " alt="" />
-            </div>
-            <div class="card-content">
-                <h1 class="card-title">3-column preview card component</h1>
-                <div class="card-labels">
-                    <span class="flair">HTML</span>
-
-                    <span class="flair">CSS</span>
-                </div>
-                <div class="card-links">
-                    <a target="_blank" class="live-url-card" href="../3-column-preview-card-component/index.html">Live
-                        url</a>
-
-                    <a target="_blank" class="github-card"
-                        href="https://github.com/curiousdilip/frontend-mentor/tree/main/3-column-preview-card-component">GitHub</a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="../profile-card-component/design/desktop-preview.jpg" alt="" />
-            </div>
-            <div class="card-content">
-                <h1 class="card-title">Profile card component</h1>
-                <div class="card-labels">
-                    <span class="flair">HTML</span>
-
-                    <span class="flair">CSS</span>
-                </div>
-                <div class="card-links">
-                    <a target="_blank" class="live-url-card" href="../profile-card-component/index.html">Live
-                        url</a>
-
-                    <a target="_blank" class="github-card"
-                        href="https://github.com/curiousdilip/frontend-mentor/tree/main/profile-card-component">GitHub</a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="../faq-accordion-card/design/desktop-preview.jpg" alt="" />
-            </div>
-            <div class="card-content">
-                <h1 class="card-title">FAQ accordion card</h1>
-                <div class="card-labels">
-                    <span class="flair">HTML</span>
-
-                    <span class="flair">CSS</span>
-                    <span class="flair">JS</span>
-                </div>
-                <div class="card-links">
-                    <a target="_blank" class="live-url-card" href="../faq-accordion-card/index.html">Live
-                        url</a>
-
-                    <a target="_blank" class="github-card"
-                        href="https://github.com/curiousdilip/frontend-mentor/tree/main/four-card-feature-section">GitHub</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-img">
-                <img src="../social-proof-section/design/desktop-preview.jpg" alt="" />
-            </div>
-            <div class="card-content">
-                <h1 class="card-title">Social proof section</h1>
-                <div class="card-labels">
-                    <span class="flair">HTML</span>
-
-                    <span class="flair">CSS</span>
-                </div>
-                <div class="card-links">
-                    <a target="_blank" class="live-url-card" href="../social-proof-section/index.html">Live
-                        url</a>
-
-                    <a target="_blank" class="github-card"
-                        href="https://github.com/curiousdilip/frontend-mentor/tree/main/social-proof-section">GitHub</a>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="card">
-            <div class="card-img">
-                <img src="../article-preview-component/design/desktop-preview.jpg" alt="" />
-            </div>
-            <div class="card-content">
-                <h1 class="card-title">Article preview component</h1>
-                <div class="card-labels">
-                    <span class="flair">HTML</span>
-
-                    <span class="flair">CSS</span>
-                    <span class="flair">JS</span>
-                </div>
-                <div class="card-links">
-                    <a target="_blank" class="live-url-card" href="../article-preview-component/index.html">Live
-                        url</a>
-
-                    <a target="_blank" class="github-card"
-                        href="https://github.com/curiousdilip/frontend-mentor/tree/main/article-preview-component">GitHub</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-img">
-                <img src="../four-card-feature-section/design/desktop-preview.jpg" alt="" />
-            </div>
-            <div class="card-content">
-                <h1 class="card-title">Four card feature section</h1>
-                <div class="card-labels">
-                    <span class="flair">HTML</span>
-
-                    <span class="flair">CSS</span>
-                </div>
-                <div class="card-links">
-                    <a target="_blank" class="live-url-card" href="../four-card-feature-section/index.html">Live
-                        url</a>
-
-                    <a target="_blank" class="github-card"
-                        href="https://github.com/curiousdilip/frontend-mentor/tree/main/four-card-feature-section">GitHub</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-img">
-                <img src="../single-price-grid-component/design/desktop-preview.jpg" alt="" />
-            </div>
-            <div class="card-content">
-                <h1 class="card-title">Single price grid component</h1>
-                <div class="card-labels">
-                    <span class="flair">HTML</span>
-
-                    <span class="flair">CSS</span>
-                </div>
-                <div class="card-links">
-                    <a target="_blank" class="live-url-card" href="../single-price-grid-component/index.html">Live
-                        url</a>
-
-                    <a target="_blank" class="github-card"
-                        href="https://github.com/curiousdilip/frontend-mentor/tree/main/single-price-grid-component">GitHub</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-img">
-                <img src="../huddle-landing-page-with-single-introductory-section/design/desktop-preview.jpg" alt="" />
-            </div>
-            <div class="card-content">
-                <h1 class="card-title">Huddle landing page with a single introductory section</h1>
-                <div class="card-labels">
-                    <span class="flair">HTML</span>
-
-                    <span class="flair">CSS</span>
-                </div>
-                <div class="card-links">
-                    <a target="_blank" class="live-url-card"
-                        href="../huddle-landing-page-with-single-introductory-section/index.html">Live
-                        url</a>
-
-                    <a target="_blank" class="github-card"
-                        href="https://github.com/curiousdilip/frontend-mentor/tree/main/huddle-landing-page-with-single-introductory-section">GitHub</a>
-                </div>
-            </div>
-        </div>
     </div>
+
     <script src="./app.js"></script>
 </body>
 
