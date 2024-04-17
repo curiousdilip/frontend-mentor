@@ -1,4 +1,4 @@
-# Frontend Mentor Projects monorepo ☜(ﾟヮﾟ ☜)
+# Frontend Mentor Projects monorepo
 
 This is the monorepo of Dilip's Frontend Mentor projects. **_[Here is the url to the dashboard](https://curiousdilip.github.io/frontend-mentor)_**
 
