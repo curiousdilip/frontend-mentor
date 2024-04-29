@@ -7,6 +7,7 @@ This is the monorepo of Dilip's Frontend Mentor projects. **_[Here is the url to
 | Projects 📦                                                                                                       | Tools 🛠️                   | Link 🔗                                                                                                                      |
 | -- | -- | -- |
 | [3-column preview card component](./beginner/3-column-preview-card-component/)                                                         | ![html] ![css]               | [Click Here](https://curiousdilip.github.io/frontend-mentor/beginner/3-column-preview-card-component/index.html)                            |
+| [Article preview component](./beginner/article-preview-component/)                                                         | ![html] ![css]               | [Click Here](https://curiousdilip.github.io/frontend-mentor/beginner/article-preview-component/index.html)                            |
 
 
 [javascript]: https://img.shields.io/badge/-JavaScript-282c34?logo=JavaScript&logocolor=F7DF1E&style=classic
