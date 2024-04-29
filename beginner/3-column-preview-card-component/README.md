@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Click Here](https://github.com/curiousdilip/frontend-mentor/tree/main/beginner/3-column-preview-card-component)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [See Live Here](https://curiousdilip.github.io/frontend-mentor/beginner/3-column-preview-card-component/index.html)
 
 ## My process
 
