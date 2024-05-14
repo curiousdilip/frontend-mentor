@@ -10,46 +10,171 @@
 
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 
-  <link rel="stylesheet" href="./style.css">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+    :root {
+      --desaturated-red: hsl(0, 36%, 70%);
+      --soft-red: hsl(0, 93%, 68%);
+      --dark-grayish-red: hsl(0, 6%, 24%);
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Josefin Sans", sans-serif;
+      background: url(../images/bg-pattern-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+
+    main section {
+      display: flex;
+
+      margin: 0 auto;
+      width: 1440px;
+    }
+
+    section .logo {
+      height: 32px;
+      width: 158px;
+      position: fixed;
+      top: 66px;
+    }
+
+    section .content {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+    }
+
+    section .content h1 {
+      font-size: 60px;
+      color: var(--dark-grayish-red);
+      text-transform: uppercase;
+      line-height: 72px;
+      letter-spacing: 25px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    section .content h1 span {
+      color: var(--desaturated-red);
+      font-weight: 300;
+      line-height: 60px;
+
+    }
+
+    section .content p {
+      font-weight: 400;
+      color: var(--desaturated-red);
+      width: 430px;
+      line-height: 28px;
+    }
+
+    section .content .email-box {
+      margin-top: 40px;
+      display: flex;
+      position: relative;
+    }
+
+    section .content .email-box .input {
+      width: 100%;
+    }
+
+
+    section .content .email-box .input .email {
+      border: 1px solid var(--desaturated-red);
+      width: 100%;
+      height: 55px;
+      padding: 20px;
+      padding-right: 20px;
+      padding-right: 100px;
+      border-radius: 50px 0px 0px 50px;
+      outline: 0;
+    }
+
+    section .content .email-box .input .email {
+      border: 3px solid var(--soft-red);
+    }
+
+    section .content .email-box .input .warning-img {
+      position: absolute;
+      top: 25%;
+      right: 15%;
+    }
+
+    section .content .email-box .input .error-message {
+      translate: 20px 10px;
+      color: var(--soft-red);
+    }
+
+    section .content .email-box .input .hide {
+      display: none;
+    }
+
+    section .content .email-box .btn {
+      position: absolute;
+      right: -30px;
+      background: black;
+      height: 55px;
+      width: 20%;
+      padding: 20px;
+      outline: 0;
+      border: 0;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+
+    section .content .email-box .btn:hover {
+      background: #fbd7d7;
+    }
+
+    section .main-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
 </head>
 
 <body>
 
   <main>
     <section>
-      <div class="box-container">
-        <div class="left">
-          <img src="./images/logo.svg" alt="" class="logo">
-          <h1><span>We're</span><br />coming soon</h1>
-          <p>
-            Hello fellow shoppers! We're currently building our new fashion store.
-            Add your email below to stay up-to-date with announcements and our launch deals.</p>
-          <form action="">
-            <div class="form-group">
-              <input type="email" id="email" placeholder="Email Address">
-              <img src="./images/icon-error.svg" class="icon-error" alt="icon-error" srcset="">
-              <button type="button" id="submit">
-                <img src="./images/icon-arrow.svg" alt="icon-arrow" srcset="">
-              </button>
-            </div>
-
-          </form>
-        </div>
-        <div class="right">
+      <img class="logo" src="./images/logo.svg" alt="logo" />
 
 
+      <div class="content">
+        <h1><span>We're</span><br />coming <br />soon</h1>
+        <p>
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our launch deals.</p>
+        <div class="email-box">
+          <div class="input">
+            <input type="email" class="email error" name="email" placeholder="Email Address">
+            <img class="warning-img" src="./images/icon-error.svg" alt="error">
+            <p class="error-message hide">Please provide a valid email</p>
+          </div>
+          <div class="btn">
+            <img src="./images/icon-arrow.svg" alt="submit">
+          </div>
         </div>
       </div>
+
+      <img src="./images/hero-desktop.jpg" alt="" class="main-image">
     </section>
   </main>
 
 
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://www.dilipmaurya.in">Dilip Kumar Maurya</a>.
-    </p>
-  </footer>
 </body>
 
 </html>
