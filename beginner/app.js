@@ -1,4 +1,28 @@
+const projects = [
+    {
+        id: 1,
+        image:
+            "./3-column-preview-card-component/images/screenshot.png",
+        title: "3-column preview card component",
+        label: ["HTML", "CSS"],
+        liveLink:
+            "./3-column-preview-card-component/",
+        repoLink:
+            "/beginner/3-column-preview-card-component",
+    },{
+        id: 2,
+        image:
+            "./article-preview-component/images/screenshot.png",
+        title: "Article preview component",
+        label: ["HTML", "CSS", "JS"],
+        liveLink:
+            "./article-preview-component/",
+        repoLink:
+            "/beginner/article-preview-component",
+    },
+  
 
+];
 
 function displayProjects(projects) {
     const projectsList = document.getElementById('card-container');
