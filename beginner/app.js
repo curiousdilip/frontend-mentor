@@ -23,7 +23,7 @@ const projects = [
         id: 3,
         image:
             "./recipe-page-main/img/screenshot.png",
-        title: "Article preview component",
+        title: "Recipe page",
         label: ["HTML", "CSS", "JS"],
         liveLink:
             "./recipe-page-main/",
