@@ -30,7 +30,7 @@ const projects = [
         repoLink:
             "/beginner/recipe-page-main",
     },{
-        id: 3,
+        id: 4,
         image:
             "./blog-preview-card-main/assets/images/screenshot.png",
         title: "Recipe page",
