@@ -19,6 +19,16 @@ const projects = [
             "./article-preview-component/",
         repoLink:
             "/beginner/article-preview-component",
+    },{
+        id: 3,
+        image:
+            "./recipe-page-main/img/screenshot.png",
+        title: "Article preview component",
+        label: ["HTML", "CSS", "JS"],
+        liveLink:
+            "./recipe-page-main/",
+        repoLink:
+            "/beginner/recipe-page-main",
     },
   
 
