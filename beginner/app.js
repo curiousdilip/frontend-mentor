@@ -29,6 +29,16 @@ const projects = [
             "./recipe-page-main/",
         repoLink:
             "/beginner/recipe-page-main",
+    },{
+        id: 3,
+        image:
+            "./blog-preview-card-main/assets/images/screenshot.png",
+        title: "Recipe page",
+        label: ["HTML", "CSS", "JS"],
+        liveLink:
+            "./blog-preview-card-main/",
+        repoLink:
+            "/beginner/blog-preview-card-main",
     },
   
 
