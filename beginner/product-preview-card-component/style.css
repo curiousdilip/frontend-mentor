@@ -1,46 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&display=swap");
-:root {
-  --dark-cyan: hsl(158, 36%, 37%);
-  --cream: hsl(30, 38%, 92%);
-  --very-dark-blue: hsl(212, 21%, 14%);
-  --dark-grayish-blue: hsl(228, 12%, 48%);
-  --white: hsl(0, 0%, 100%);
-}
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
 }
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     background: var(--cream);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 section {
     border-radius: 10px;
-  position: relative;
-  background: var(--white);
-  margin:10% auto;
-  width: 600px;
-  height:450px;
-  display: flex;
-  justify-content: center;
-  /* align-items: center; */
-  box-shadow: 0 35px 55px rgb(0 0 0 / 10%);
+    position: relative;
+    background: var(--white);
+    margin: 0 auto;
+    width: 600px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    box-shadow: 0 35px 55px rgb(0 0 0 / 10%);
 }
 
-.left-side
-{
+.left-side {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     /* height: 100%; */
@@ -50,27 +46,24 @@ section {
     background-repeat: no-repeat;
     background-position: center; */
 }
-.left-side img
-{
+
+.left-side img {
     height: 450px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
 
-.right-side
-{
+.right-side {
     height: 450px;
     padding: 40px;
     width: 300px;
 }
 
-.right-side p
-{
+.right-side p {
     font-size: 14px;
 }
 
-.right-side h3
-{
+.right-side h3 {
     font-size: 14px;
     color: var(--dark-grayish-blue);
     letter-spacing: 5px;
@@ -80,7 +73,7 @@ section {
     padding-bottom: 10px;
 }
 
-.right-side h1{
+.right-side h1 {
     font-family: 'Fraunces', serif;
     font-weight: 700;
     color: var(--very-dark-blue);
@@ -88,54 +81,83 @@ section {
     padding-bottom: 20px;
 }
 
-.right-side p{
+.right-side p {
     font-family: 'Montserrat', serif;
     font-weight: 500;
     color: var(--dark-grayish-blue);
     padding-bottom: 20px;
 }
 
-.right-side .price
-{
+.right-side .price {
     display: flex;
     justify-content: space-between;
-    align-items:baseline;
+    align-items: baseline;
     margin-bottom: 20px;
 }
-.right-side h2
-{
+
+.right-side h2 {
     color: var(--dark-cyan);
 }
 
-.right-side .price p
-{
+.right-side .price p {
     font-size: 14px;
     color: var(--dark-grayish-blue);
 }
 
-.right-side a
-{
+.right-side a {
     margin-top: 12px;
     color: var(--white);
     text-decoration: none;
-    padding: 10px 20px; 
+    padding: 10px 20px;
     background-color: var(--dark-cyan);
     border-radius: 10px;
     display: flex;
     justify-content: center;
 }
 
-.right-side a:hover
-{
+.right-side a:hover {
     background-color: #1a4031;
 }
+.left-side .mobile {
+    display: none;
+}
 
-
-@media (max-width:375px) {
-    section{
-        display: block;
-    }
-    .left-side img{
+@media (max-width:768px) {
+    section {
+        flex-direction: column;
+        overflow: hidden;
         height: auto;
+        width: auto;
+        margin: 40px 20px;
+    }
+
+    .left-side {
+        border-radius: 10px;
+    }
+
+    .left-side .mobile {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+
+    .left-side img {
+        height: auto;
+       border-radius: 0;
+    }
+
+    .left-side .desktop {
+        display: none;
+    }
+
+    .right-side {
+        height: auto;
+        padding: 40px;
+        width: auto;
+    }
+
+    .right-side h1{
+        width: auto;
     }
 }
