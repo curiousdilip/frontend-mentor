@@ -84,6 +84,17 @@ const projects = [
             "/beginner/interactive-rating-component",
     },
   
+    {
+        image:
+            "./nft-preview-card-component/images/screenshot.png",
+        title: "Recipe page",
+        label: ["HTML", "CSS", "JS"],
+        liveLink:
+            "./nft-preview-card-component/",
+        repoLink:
+            "/beginner/nft-preview-card-component",
+    },
+  
 ];
 
 function displayProjects(projects) {
