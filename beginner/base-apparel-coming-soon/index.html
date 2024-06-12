@@ -17,6 +17,8 @@
       --desaturated-red: hsl(0, 36%, 70%);
       --soft-red: hsl(0, 93%, 68%);
       --dark-grayish-red: hsl(0, 6%, 24%);
+      --linear-grad-pink: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+      --linear-grad-pink-hover: linear-gradient(135deg, hsl(0, 80%, 86%) 100%, hsl(0, 74%, 74%));
     }
 
     * {
@@ -79,69 +81,157 @@
       line-height: 28px;
     }
 
-    section .content .email-box {
-      margin-top: 40px;
-      display: flex;
-      position: relative;
-    }
-
-    section .content .email-box .input {
-      width: 100%;
-    }
-
-
-    section .content .email-box .input .email {
-      border: 1px solid var(--desaturated-red);
-      width: 100%;
-      height: 55px;
-      padding: 20px;
-      padding-right: 20px;
-      padding-right: 100px;
-      border-radius: 50px 0px 0px 50px;
-      outline: 0;
-    }
-
-    section .content .email-box .input .email {
-      border: 3px solid var(--soft-red);
-    }
-
-    section .content .email-box .input .warning-img {
-      position: absolute;
-      top: 25%;
-      right: 15%;
-    }
-
-    section .content .email-box .input .error-message {
-      translate: 20px 10px;
-      color: var(--soft-red);
-    }
-
-    section .content .email-box .input .hide {
-      display: none;
-    }
-
-    section .content .email-box .btn {
-      position: absolute;
-      right: -30px;
-      background: black;
-      height: 55px;
-      width: 20%;
-      padding: 20px;
-      outline: 0;
-      border: 0;
-      border-radius: 50px;
-      cursor: pointer;
-    }
-
-    section .content .email-box .btn:hover {
-      background: #fbd7d7;
-    }
-
     section .main-image {
       position: absolute;
       top: 0;
       right: 0;
       height: 100%;
+    }
+
+    .wrapper {
+      position: relative;
+      margin-top: 40px;
+    }
+
+    input,
+    form {
+      inline-size: 100%;
+    }
+
+    input {
+      padding: .8rem 1.5rem;
+    }
+
+    button,
+    .container-img-error {
+      position: absolute;
+      top: 0;
+    }
+
+    .container-img-error {
+      block-size: 100%;
+      display: flex;
+      align-items: center;
+      right: 5.5rem;
+    }
+
+    .img-error {
+      max-block-size: 1.75rem;
+    }
+
+    button {
+      right: 0;
+      bottom: 0;
+      padding: .8rem 2.75rem;
+    }
+
+    .screen-reader {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+
+    .error-msg {
+      margin-inline-start: 6%;
+    }
+
+    .hidden {
+      opacity: 0;
+    }
+
+    input {
+      border: 1px solid var(--desaturated-red);
+      border-radius: 50px;
+      background-color: transparent;
+      font-weight: 400;
+      color: var(--desaturated-red);
+      line-height: 28px;
+    }
+
+    input::placeholder {
+      line-height: 28px;
+      color: var(--desaturated-red);
+
+    }
+
+    .invalid-entry {
+      border: 2px solid var(--soft-red);
+    }
+
+    input:focus {
+      outline: 1px solid var(--desaturated-red);
+    }
+
+    button {
+      border-radius: 50px;
+      border: 0;
+      background: var(--linear-grad-pink);
+      box-shadow: 0px 15px 15px 0px #f2d5d3a2;
+    }
+
+    button:hover {
+      background: var(--linear-grad-pink-hover);
+    }
+
+    .error-msg {
+      color: var(--soft-red);
+    }
+
+    section .mob-image {
+      display: none;
+    }
+
+    @media (max-width:768px) {
+      main section {
+        width: auto;
+        flex-direction: column;
+        position: relative;
+      }
+
+      section .logo {
+        top: 32px;
+        left: 32px;
+      }
+
+      section .main-image {
+        display: none;
+      }
+
+      section .mob-image {
+        display: block;
+        margin-top: 100px;
+        width: 100%;
+      }
+
+      section .content {
+        height: auto;
+        padding: 32px;
+        display: block;
+        text-align: center;
+      }
+
+      section .content h1 {
+        font-size: 40px;
+        line-height: 45px;
+        letter-spacing: 11px;
+      }
+
+      section .content h1 span {
+        font-size: 40px;
+        line-height: 60px;
+      }
+
+      section .content p {
+        font-size: 14px;
+        line-height: 22px;
+        width: auto;
+      }
     }
   </style>
 </head>
@@ -152,28 +242,78 @@
     <section>
       <img class="logo" src="./images/logo.svg" alt="logo" />
 
-
+      <img src="./images/hero-mobile.jpg" alt="" class="mob-image">
       <div class="content">
         <h1><span>We're</span><br />coming <br />soon</h1>
         <p>
           Hello fellow shoppers! We're currently building our new fashion store.
           Add your email below to stay up-to-date with announcements and our launch deals.</p>
-        <div class="email-box">
-          <div class="input">
-            <input type="email" class="email error" name="email" placeholder="Email Address">
-            <img class="warning-img" src="./images/icon-error.svg" alt="error">
-            <p class="error-message hide">Please provide a valid email</p>
+        <form novalidate>
+          <div class="wrapper">
+            <label for="email" class="screen-reader">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email Address">
+            <div class="container-img-error hidden">
+              <img src="./images/icon-error.svg" alt="" class="img-error">
+            </div>
+            <button>
+              <div class="container-img-btn-icon">
+                <img src="./images/icon-arrow.svg" alt="" class="submit-btn-icon">
+              </div>
+              <div class="screen-reader">Submit</div>
+            </button>
           </div>
-          <div class="btn">
-            <img src="./images/icon-arrow.svg" alt="submit">
-          </div>
-        </div>
+          <p class="error-msg hidden" aria-hidden="true">Please provide a valid email</p>
+        </form>
       </div>
 
       <img src="./images/hero-desktop.jpg" alt="" class="main-image">
     </section>
   </main>
+  <script>
+    const form = document.querySelector('form');
+    const input = document.querySelector('input');
+    const errorMsg = document.querySelector('.error-msg');
+    const errorImg = document.querySelector('.container-img-error');
+    const btn = document.querySelector('button');
 
+    function isInvalid() {
+      return !(input.validity.valid) || input.value == "";
+    }
+
+    function containsErrorClasses() {
+      if (input.classList.contains('invalid-entry')) return true;
+      return false;
+    }
+
+    function removeErrorClasses() {
+      input.classList.remove('invalid-entry');
+      errorImg.classList.add('hidden');
+      errorMsg.classList.add('hidden');
+      errorMsg.setAttribute('aria-hidden', 'true');
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (isInvalid()) {
+        input.classList.add('invalid-entry');
+        errorImg.classList.remove('hidden');
+        errorMsg.classList.remove('hidden');
+        errorMsg.setAttribute('aria-hidden', 'false');
+      }
+      else {
+        removeErrorClasses();
+        input.value = '';
+      }
+    })
+
+    input.addEventListener('blur', (e) => {
+      if (containsErrorClasses()) removeErrorClasses();
+    })
+
+    btn.addEventListener('blur', (e) => {
+      if (containsErrorClasses()) removeErrorClasses();
+    })
+  </script>
 
 </body>
 
