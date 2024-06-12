@@ -85,7 +85,7 @@
     }
 
     .container .left img {
-      width: 80%;
+      width: 95%;
     }
 
     .container .left {
@@ -130,19 +130,36 @@
       font-weight: 400;
     }
 
+    @media (max-width:768px) {
+      main {
+        height: 100vh;
+        background: url("./images/bg-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
 
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-      position: fixed;
-      width: 100%;
-      bottom: 12px;
-      font-family: 'Open Sans', sans-serif;
-      color: white;
-    }
+      section {
+        padding: 0 32px;
+      }
 
-    .attribution a {
-      color: hsl(300, 69%, 71%);
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .container .right {
+        width: 100%;
+      }
+
+      .container .left {
+        width: 100%;
+      }
+
+      section .social-links {
+        width: 100%;
+        justify-content: center;
+        right: 0;
+      }
     }
   </style>
 </head>
@@ -178,19 +195,6 @@
       </div>
     </section>
   </main>
-
-
-
-
-
-
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://www.dilipmaurya.in">Dilip Kumar Maurya</a>.
-    </p>
-  </footer>
 </body>
 
 </html>
