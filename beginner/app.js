@@ -1,6 +1,5 @@
 const projects = [
     {
-        id: 1,
         image:
             "./3-column-preview-card-component/images/screenshot.png",
         title: "3-column preview card component",
@@ -10,7 +9,6 @@ const projects = [
         repoLink:
             "/beginner/3-column-preview-card-component",
     },{
-        id: 2,
         image:
             "./article-preview-component/images/screenshot.png",
         title: "Article preview component",
@@ -20,7 +18,6 @@ const projects = [
         repoLink:
             "/beginner/article-preview-component",
     },{
-        id: 3,
         image:
             "./recipe-page-main/img/screenshot.png",
         title: "Recipe page",
@@ -30,7 +27,6 @@ const projects = [
         repoLink:
             "/beginner/recipe-page-main",
     },{
-        id: 4,
         image:
             "./blog-preview-card-main/assets/images/screenshot.png",
         title: "Recipe page",
@@ -40,8 +36,54 @@ const projects = [
         repoLink:
             "/beginner/blog-preview-card-main",
     },
+    {
+        image:
+            "./base-apparel-coming-soon/images/screenshot.png",
+        title: "Recipe page",
+        label: ["HTML", "CSS", "JS"],
+        liveLink:
+            "./base-apparel-coming-soon/",
+        repoLink:
+            "/beginner/base-apparel-coming-soon",
+    },
+    {
+        image:
+            "./faq-accordion-card/images/screenshot.png",
+        title: "Recipe page",
+        label: ["HTML", "CSS", "JS"],
+        liveLink:
+            "./faq-accordion-card/",
+        repoLink:
+            "/beginner/faq-accordion-card", 
+    },  {
+        image:
+            "./four-card-feature-section/images/screenshot.png",
+        title: "Recipe page",
+        label: ["HTML", "CSS", "JS"],
+        liveLink:
+            "./four-card-feature-section/",
+        repoLink:
+            "/beginner/four-card-feature-section",
+    }, {
+        image:
+            "./huddle-landing-page-with-single-introductory-section/images/screenshot.png",
+        title: "Recipe page",
+        label: ["HTML", "CSS", "JS"],
+        liveLink:
+            "./huddle-landing-page-with-single-introductory-section/",
+        repoLink:
+            "/beginner/huddle-landing-page-with-single-introductory-section",
+    },{
+        image:
+            "./interactive-rating-component/images/screenshot.png",
+        title: "Recipe page",
+        label: ["HTML", "CSS", "JS"],
+        liveLink:
+            "./interactive-rating-component/",
+        repoLink:
+            "/beginner/interactive-rating-component",
+    },
   
-
 ];
 
 function displayProjects(projects) {
