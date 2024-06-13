@@ -29,7 +29,7 @@ const projects = [
     },{
         image:
             "./blog-preview-card-main/assets/images/screenshot.png",
-        title: "Recipe page",
+        title: "Blog preview card",
         label: ["HTML", "CSS", "JS"],
         liveLink:
             "./blog-preview-card-main/",
@@ -39,7 +39,7 @@ const projects = [
     {
         image:
             "./base-apparel-coming-soon/images/screenshot.png",
-        title: "Recipe page",
+        title: "Base apparel coming soon",
         label: ["HTML", "CSS", "JS"],
         liveLink:
             "./base-apparel-coming-soon/",
@@ -49,7 +49,7 @@ const projects = [
     {
         image:
             "./faq-accordion-card/images/screenshot.png",
-        title: "Recipe page",
+        title: "FAQ accordion card",
         label: ["HTML", "CSS", "JS"],
         liveLink:
             "./faq-accordion-card/",
@@ -58,7 +58,7 @@ const projects = [
     },  {
         image:
             "./four-card-feature-section/images/screenshot.png",
-        title: "Recipe page",
+        title: "Four card feature section",
         label: ["HTML", "CSS", "JS"],
         liveLink:
             "./four-card-feature-section/",
@@ -67,7 +67,7 @@ const projects = [
     }, {
         image:
             "./huddle-landing-page-with-single-introductory-section/images/screenshot.png",
-        title: "Recipe page",
+        title: "Huddle landing page",
         label: ["HTML", "CSS", "JS"],
         liveLink:
             "./huddle-landing-page-with-single-introductory-section/",
@@ -76,7 +76,7 @@ const projects = [
     },{
         image:
             "./interactive-rating-component/images/screenshot.png",
-        title: "Recipe page",
+        title: "Interactive rating component",
         label: ["HTML", "CSS", "JS"],
         liveLink:
             "./interactive-rating-component/",
@@ -87,7 +87,7 @@ const projects = [
     {
         image:
             "./nft-preview-card-component/images/screenshot.png",
-        title: "Recipe page",
+        title: "NFT preview card component",
         label: ["HTML", "CSS", "JS"],
         liveLink:
             "./nft-preview-card-component/",
