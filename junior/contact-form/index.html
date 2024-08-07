@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Contact form</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Karla", sans-serif;
+    }
+
+    :root {
+      --green-200: hsl(148, 38%, 91%);
+      --green-600: hsl(169, 82%, 27%);
+      --red: hsl(0, 66%, 54%);
+      --white: hsl(0, 0%, 100%);
+      --grey-500: hsl(186, 15%, 59%);
+      --grey-900: hsl(187, 24%, 22%);
+    }
+
+    main {
+      background-color: var(--green-200);
+      height: 100vh;
+      width: 100%;
+      display: grid;
+      place-items: center;
+    }
+
+    section {
+      padding: 40px;
+      background-color: var(--white);
+      width: 736px;
+      border-radius: 15px;
+    }
+
+    section h1 {
+      font-size: 30px;
+      color: var(--grey-900);
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    form .flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+
+    form label {
+      color: var(--grey-900);
+      margin-bottom: 10px;
+    }
+
+    form .flex .hfield {
+      width: 49%;
+    }
+
+    form .flex .hfield input {
+      width: 100%;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid var(--grey-900);
+    }
+
+    form .ffield input {
+      width: 100%;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid var(--grey-900);
+    }
+
+    form .ffield {
+      width: 100%;
+    }
+
+    form .querybox {
+      display: flex;
+      justify-content: space-between;
+    }
+
+
+    form textarea {
+      width: 100%;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid var(--grey-900);
+    }
+
+    form #consent {
+      width: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <section>
+      <h1>
+        Contact Us
+      </h1>
+      <form action="#">
+        <div class="flex">
+          <div class="hfield">
+            <label for="fname">
+              First Name
+            </label>
+            <br>
+            <input type="text" name="fname" id="fname">
+          </div>
+          <div class="hfield">
+            <label for="lname">
+              Last Name
+            </label>
+            <br>
+            <input type="text" name="lname" id="lname">
+          </div>
+        </div>
+        <div class="ffield">
+          <label for="lname">
+            Email Address
+          </label>
+          <br>
+          <input type="email" name="email" id="email">
+        </div>
+        <div class=" querybox">
+          <label for="query">
+            Query Type
+          </label>
+          <div class="point">
+            <input type="radio" name="query" id="general-enquiry">
+            <label for="general-enquiry">General Enquiry</label>
+          </div>
+          <div class="point">
+            <input type="radio" name="query" id="support-request">
+            <label for="support-request">Support Request</label>
+          </div>
+
+        </div>
+        <div class="ffield ">
+          <label for="message">
+            Message
+          </label>
+        </div><br>
+        <textarea name="message" id="message"></textarea>
+        </div>
+        <div class="ffield ">
+          <input type="checkbox" name="consent" id="consent">
+          <label for="consent">I consent to being contacted by the team</label>
+
+        </div>
+
+        <div class="ffield">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </section>
+  </main>
+
+  First Name
+  This field is required
+
+  Last Name
+  This field is required
+
+  Email Address
+  Please enter a valid email address
+  This field is required
+
+  Query Type
+
+
+  Please select a query type
+
+  Message
+  This field is required
+
+  I consent to being contacted by the team
+  To submit this form, please consent to being contacted
+
+  Submit
+
+  Message Sent!
+  Thanks for completing the form. We'll be in touch soon!
+
+</body>
+
+</html>
