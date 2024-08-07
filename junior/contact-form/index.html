@@ -60,6 +60,11 @@
     form label {
       color: var(--grey-900);
       margin-bottom: 10px;
+      display:inline-block;
+    }
+
+    form label .star {
+      color: var(--green-600);
     }
 
     form .flex .hfield {
@@ -71,6 +76,7 @@
       padding: 15px;
       border-radius: 10px;
       border: 1px solid var(--grey-900);
+      margin-bottom:30px;
     }
 
     form .ffield input {
@@ -78,6 +84,7 @@
       padding: 15px;
       border-radius: 10px;
       border: 1px solid var(--grey-900);
+      margin-bottom:30px;
     }
 
     form .ffield {
@@ -87,7 +94,24 @@
     form .querybox {
       display: flex;
       justify-content: space-between;
+      flex-direction:column;
     }
+    form .querybox .points {
+     display:flex;
+      justify-content:space-between;
+    }
+    form .querybox .point {
+      width: 49%;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid var(--grey-900);
+      margin-bottom:30px;
+    }
+
+    form .querybox .point label{
+     margin:0;
+    }
+
 
 
     form textarea {
@@ -95,10 +119,16 @@
       padding: 15px;
       border-radius: 10px;
       border: 1px solid var(--grey-900);
+      margin-bottom:30px;
     }
 
     form #consent {
       width: auto;
+    }
+
+    form input[type="submit"]{
+      background-color: var(--green-600);
+      color:var(--white)
     }
   </style>
 </head>
@@ -114,30 +144,31 @@
         <div class="flex">
           <div class="hfield">
             <label for="fname">
-              First Name
+              First Name <span class="star"> *</span>
             </label>
-            <br>
+          
             <input type="text" name="fname" id="fname">
           </div>
           <div class="hfield">
             <label for="lname">
-              Last Name
+              Last Name <span class="star"> *</span>
             </label>
-            <br>
+          
             <input type="text" name="lname" id="lname">
           </div>
         </div>
         <div class="ffield">
           <label for="lname">
-            Email Address
+            Email Address<span class="star"> *</span>
           </label>
-          <br>
+         
           <input type="email" name="email" id="email">
         </div>
         <div class=" querybox">
           <label for="query">
-            Query Type
+            Query Type<span class="star"> *</span>
           </label>
+        <div class="points">
           <div class="point">
             <input type="radio" name="query" id="general-enquiry">
             <label for="general-enquiry">General Enquiry</label>
@@ -146,13 +177,14 @@
             <input type="radio" name="query" id="support-request">
             <label for="support-request">Support Request</label>
           </div>
+        </div>
 
         </div>
         <div class="ffield ">
           <label for="message">
-            Message
+            Message<span class="star"> *</span>
           </label>
-        </div><br>
+        </div>
         <textarea name="message" id="message"></textarea>
         </div>
         <div class="ffield ">
