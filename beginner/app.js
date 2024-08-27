@@ -94,6 +94,16 @@ const projects = [
         repoLink:
             "/beginner/nft-preview-card-component",
     },
+    {
+        image:
+            "./notifications-page/assets/images/screenshot.png",
+        title: "Notifications Page",
+        label: ["HTML", "CSS", "JS"],
+        liveLink:
+            "./notifications-page/",
+        repoLink:
+            "/beginner/notifications-page",
+    },
   
 ];
 
