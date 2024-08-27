@@ -24,14 +24,9 @@
 
 body {
   background-color: var(--verylightgrayishblue);
-}
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
+  display: grid;
+  place-content: center;
+  height: 100vh;
 }
 
 a {
@@ -49,7 +44,7 @@ p {
 }
 
 .notification {
-  padding: 20px;
+  padding: 16px;
   background-color: var(--verylightgrayishblue);
   border-radius: 20px;
   margin: 10px 0;
@@ -65,14 +60,14 @@ p {
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 120px 1200px var(--lightgrayishblue1);
-  width: 38%;
-  margin: auto;
-  padding: 20px;
+  width: 730px;
+  padding:30px  30px 16px ;
+  height: 840px;
 }
 
 .message {
     margin-top: 10px;
-  padding: 20px;
+  padding: 16px;
   background-color: var(--white);
   border-radius: 20px;
   cursor: pointer;
