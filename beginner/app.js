@@ -104,6 +104,104 @@ const projects = [
         repoLink:
             "/beginner/notifications-page",
     },
+    {
+        image:
+            "./order-summary-component/images/screenshot.png",
+        title: "Order Summary Component",
+        label: ["HTML", "CSS", "JS"],
+        liveLink:
+            "./order-summary-component/",
+        repoLink:
+            "/beginner/order-summary-component",
+    },
+    {
+        image:
+            "./ping-coming-soon-page/images/screenshot.png",
+        title: "Ping Coming Soon Page",
+        label: ["HTML", "CSS", "JS"],
+        liveLink:
+            "./ping-coming-soon-page/",
+        repoLink:
+            "/beginner/ping-coming-soon-page",
+    },
+    {
+        image:
+            "./product-preview-card-component/images/screenshot.png",
+        title: "Product Preview Card Component",
+        label: ["HTML", "CSS", "JS"],
+        liveLink:
+            "./product-preview-card-component/",
+        repoLink:
+            "/beginner/product-preview-card-component",
+    },
+    {
+        image:
+            "./profile-card-component/images/screenshot.png",
+        title: "Product Card Component",
+        label: ["HTML", "CSS", "JS"],
+        liveLink:
+            "./profile-card-component/",
+        repoLink:
+            "/beginner/profile-card-component",
+    },
+    {
+        image:
+            "./qr-code-component-main/images/screenshot.png",
+        title: "QR Code Component Main",
+        label: ["HTML", "CSS", "JS"],
+        liveLink:
+            "./qr-code-component-main/",
+        repoLink:
+            "/beginner/qr-code-component-main",
+    },
+    {
+        image:
+            "./results-summary-component/assets/images/screenshot.png",
+        title: "Results Summary Component",
+        label: ["HTML", "CSS", "JS"],
+        liveLink:
+            "./results-summary-component/",
+        repoLink:
+            "/results-summary-component",
+    },
+    {
+        image:
+            "./single-price-grid-component/images/screenshot.png",
+        title: "Single Price Grid Component",
+        label: ["HTML", "CSS", "JS"],
+        liveLink:
+            "./single-price-grid-component/",
+        repoLink:
+            "/beginner/single-price-grid-component",
+    },
+    {
+        image:
+            "./social-links-profile-main/assets/images/screenshot.png",
+        title: "Social Links Profile Main",
+        label: ["HTML", "CSS", "JS"],
+        liveLink:
+            "./social-links-profile-main/",
+        repoLink:
+            "/beginner/social-links-profile-main",
+    }, {
+        image:
+            "./social-proof-section/images/screenshot.png",
+        title: "Social Proof Section",
+        label: ["HTML", "CSS", "JS"],
+        liveLink:
+            "./social-proof-section/",
+        repoLink:
+            "/beginner/social-proof-section",
+    }, {
+        image:
+            "./stats-preview-card-component/images/screenshot.png",
+        title: "Stats Preview Card Component",
+        label: ["HTML", "CSS", "JS"],
+        liveLink:
+            "./stats-preview-card-component/",
+        repoLink:
+            "/beginner/stats-preview-card-component",
+    },
   
 ];
 
