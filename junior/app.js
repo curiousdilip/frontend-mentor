@@ -17,6 +17,15 @@ const projects = [
             "./news-homepage-main/",
         repoLink:
             "/junior/news-homepage-main",
+    }, {
+        image:
+            "./contact-form/assets/images/screenshot.png",
+        title: "Contact Form",
+        label: ["HTML", "CSS"],
+        liveLink:
+            "./contact-form/",
+        repoLink:
+            "/junior/contact-form",
     }
   
 ];
