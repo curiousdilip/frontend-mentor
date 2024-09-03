@@ -19,6 +19,11 @@
         <div class="logo">
           <a href="# "><img src="./assets/images/logo.svg" alt=""></a>
         </div>
+        <button class="hamburger" aria-label="Toggle navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
         <div class="nav">
           <ul>
             <li><a href="#">Home</a></li>
@@ -109,7 +114,17 @@
       </div>
     </section>
   </main>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.querySelector('.hamburger');
+      const navMenu = document.querySelector('.nav');
+  
+      hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+      });
+    });
+  </script>
 </body>
 
 </html>
