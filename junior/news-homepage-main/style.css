@@ -80,6 +80,15 @@ main header .container .nav ul li a:hover {
 
 }
 
+
+#hero .container .main .heroimage .mobile  {
+    display: none;
+}
+
+#hero .container .main .heroimage .desktop  {
+    display: block;
+}
+
 #hero .container .main .boxcontainer{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -219,4 +228,48 @@ main header .container .nav ul li a:hover {
 #posts .container .post .details p {
     font-size: 15px;
     color: var(--dark-grayish-blue);
+}
+
+@media (max-width:768px) {
+    body {
+        max-width: 90%;
+        margin: 20px;
+    }
+
+    main {
+        height: auto;
+    }
+
+    #hero .container {
+        display: block;
+    }
+    #hero .container .main .heroimage .mobile  {
+        display: block;
+    }
+
+    #hero .container .main .heroimage .desktop  {
+        display: none;
+    }
+
+    #hero .container .main .boxcontainer{
+        display: block;
+    
+    }
+
+    #hero .container .main .boxcontainer h1{
+       margin-bottom: 20px;
+    }
+
+    #hero .container .main .boxcontainer .box a{
+      margin-bottom: 60px;
+    }
+#posts{
+    margin-top: 60px;
+}
+    #posts .container {
+       flex-direction: column;
+       justify-content: center;
+align-items: flex-start;
+
+    }
 }
