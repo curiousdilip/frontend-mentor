@@ -8,6 +8,15 @@ const projects = [
             "./testimonials-grid-section-main/",
         repoLink:
             "/junior/testimonials-grid-section-main",
+    },  {
+        image:
+            "./news-homepage-main/assets/images/screenshot.png",
+        title: "News Homepage Main",
+        label: ["HTML", "CSS"],
+        liveLink:
+            "./news-homepage-main/",
+        repoLink:
+            "/junior/news-homepage-main",
     }
   
 ];
