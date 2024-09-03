@@ -130,6 +130,44 @@
       background-color: var(--green-600);
       color:var(--white)
     }
+
+    .error-message {
+  color: var(--red);
+  font-size: 0.875em;
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
+
+@media (max-width:768px) {
+  main{
+    height: auto;
+    padding: 40px;
+  }
+
+section{
+  width: 100%;
+}
+form .flex {
+  display: block;
+}
+
+form .flex .hfield{
+      width: 100%;
+    }
+
+    form .querybox .points {
+  display: block;
+}
+
+form .querybox .point{
+  width: 100%;
+}
+
+form #consent {
+  width: auto;
+  margin: 0;
+}
+}
   </style>
 </head>
 
@@ -168,7 +206,7 @@
           <label for="query">
             Query Type<span class="star"> *</span>
           </label>
-        <div class="points">
+        <div class="points" >
           <div class="point">
             <input type="radio" name="query" id="general-enquiry">
             <label for="general-enquiry">General Enquiry</label>
@@ -199,33 +237,56 @@
       </form>
     </section>
   </main>
-
-  First Name
-  This field is required
-
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-
-
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.querySelector('form');
+      
+      form.addEventListener('submit', function(event) {
+        let isValid = true;
+        const messages = {
+          fname: "This field is required",
+          lname: "This field is required",
+          email: "Email Address is required and must be valid",
+          query: "Please select a query type",
+          message: "This field is required",
+          consent: "To submit this form, please consent to being contacted"
+        };
+        
+        // Clear previous messages
+        document.querySelectorAll('.error-message').forEach(el => el.remove());
+        
+        // Validate each field
+        ['fname', 'lname', 'email', 'query', 'message', 'consent'].forEach(id => {
+          const input = document.getElementById(id);
+          if (!input) return;
+          
+          if (input.type === 'radio') {
+            const checked = document.querySelector(`input[name=${input.name}]:checked`);
+            if (!checked) {
+              isValid = false;
+              input.parentElement.insertAdjacentHTML('beforeend', `<div class="error-message">${messages.query}</div>`);
+            }
+          } else if (input.type === 'checkbox') {
+            if (!input.checked) {
+              isValid = false;
+              input.parentElement.insertAdjacentHTML('beforeend', `<div class="error-message">${messages.consent}</div>`);
+            }
+          } else if (!input.value.trim()) {
+            isValid = false;
+            input.insertAdjacentHTML('afterend', `<div class="error-message">${messages[id]}</div>`);
+          } else if (input.type === 'email' && !input.validity.valid) {
+            isValid = false;
+            input.insertAdjacentHTML('afterend', `<div class="error-message">${messages.email}</div>`);
+          }
+        });
+        
+        if (!isValid) {
+          event.preventDefault(); // Prevent form submission
+        }
+      });
+    });
+    </script>
+    
 </body>
 
 </html>
