@@ -1,48 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | FAQ accordion</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Work Sans", serif;
+
+    }
+
+    :root {
+      --white: hsl(0, 0%, 100%);
+      --light-pink: hsl(276, 100.00%, 97.10%);
+      --grayish-purple: hsl(292, 16%, 49%);
+      --dark-purple: hsl(292, 42%, 14%);
+    }
+
+    main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-image: url("/images/background-pattern-desktop.svg");
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: contain;
+      background-color: var(--light-pink);
+
+    }
+
+    .hero {
+      background-color: var(--white);
+      padding: 40px;
+      width: 600px;
+      border-radius: 18px;
+    }
+
+    @media (max-width:768px) {
+      .hero {
+        margin-inline: 24px;
+        padding-inline: 24px;
+      }
+    }
+
+    .hero .title {
+      display: flex;
+      gap: 26px;
+    }
+
+    .hero h2 {
+      font-size: 56px;
+      font-weight: bold;
+      color: var(--dark-purple);
+    }
+
+    .faqs .faq-box {
+      border-bottom: 2px solid var(--light-pink);
+      padding: 25px 0;
+      cursor: pointer;
+    }
+
+    .faqs .faq-box .question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    .faqs .faq-box .question h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--dark-purple);
+    }
+
+    .faqs .faq-box .question h3:hover {
+
+      color: #ad28eb;
+    }
+
+    .faqs .faq-box .question.active {
+
+      margin-bottom: 27px;
+    }
+
+    .faqs .faq-box .question .icon {
+      height: 25px;
+    }
+
+    .faqs .faq-box .question .icon img {
+      max-width: 25px;
+      transition: transform 0.3s ease;
+    }
+
+    .faqs .faq-box .question.active .icon .minus {
+      display: block;
+      transform: rotate(0deg);
+    }
+
+    .faqs .faq-box .question.active .icon .plus {
+      display: none;
+    }
+
+    .faqs .faq-box .question .icon .minus {
+      display: none;
+      transform: rotate(180deg);
+    }
+
+    .faqs .faq-box .question .icon .plus {
+      display: block;
+      transform: rotate(0deg);
+
+    }
+
+
+    .faqs .faq-box .answer {
+      display: none;
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      transition: opacity 0.3s ease, height 0.3s ease;
+    }
+
+
+    .faqs .faq-box .answer.active {
+      display: block;
+      opacity: 1;
+      height: auto;
+    }
+
+
+    .faqs .faq-box .answer p {
+      line-height: 24px;
+      color: var(--dark-purple);
+    }
   </style>
 </head>
+
 <body>
+  <main>
+    <section class="hero">
+      <div class="title">
+        <img src="./images/icon-star.svg" alt="star icon">
+        <h2>Faqs</h2>
+      </div>
+      <div class="faqs">
 
-  FAQs
+        <div class="faq-box">
+          <div class="question active">
+            <h3>What is Frontend Mentor, and how will it help me?</h3>
+            <div class="icon">
+              <img src="./images/icon-minus.svg" alt="" class="minus">
+              <img src="./images/icon-plus.svg" alt="" class="plus">
 
-  What is Frontend Mentor, and how will it help me?
+            </div>
+          </div>
+          <div class="answer active">
+            <p> Frontend Mentor offers realistic coding challenges to help developers improve their
+              frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
+              all levels and ideal for portfolio building.</p>
+          </div>
+        </div>
+        <div class="faq-box">
+          <div class="question">
+            <h3>Is Frontend Mentor free?</h3>
+            <div class="icon">
+              <img src="./images/icon-minus.svg" alt="" class="minus">
+              <img src="./images/icon-plus.svg" alt="" class="plus">
+            </div>
+          </div>
+          <div class="answer">
+            <p>Yes, Frontend Mentor offers both free and premium coding challenges, with the free
+              option providing access to a range of projects suitable for all skill levels.</p>
+          </div>
+        </div>
+        <div class="faq-box">
+          <div class="question">
+            <h3>Can I use Frontend Mentor projects in my portfolio?</h3>
+            <div class="icon">
+              <img src="./images/icon-minus.svg" alt="" class="minus">
+              <img src="./images/icon-plus.svg" alt="" class="plus">
+            </div>
+          </div>
+          <div class="answer">
+            <p>Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+              way to showcase your skills to potential employers!</p>
+          </div>
+        </div>
 
-  Frontend Mentor offers realistic coding challenges to help developers improve their 
-  frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
-  all levels and ideal for portfolio building.
+        <div class="faq-box">
+          <div class="question">
+            <h3>How can I get help if I'm stuck on a Frontend Mentor challenge?</h3>
+            <div class="icon">
+              <img src="./images/icon-minus.svg" alt="" class="minus">
+              <img src="./images/icon-plus.svg" alt="" class="plus">
+            </div>
+          </div>
+          <div class="answer">
+            <p>The best place to get help is inside Frontend Mentor's Discord community. There's a help
+              channel where you can ask questions and seek support from other community members.</p>
+          </div>
+        </div>
 
-  Is Frontend Mentor free?
+      </div>
+    </section>
+  </main>
+  <script>document.addEventListener('DOMContentLoaded', () => {
 
-  Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
-  option providing access to a range of projects suitable for all skill levels.
-
-  Can I use Frontend Mentor projects in my portfolio?
-
-  Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
-  way to showcase your skills to potential employers!
-
-  How can I get help if I'm stuck on a Frontend Mentor challenge?
-  
-  The best place to get help is inside Frontend Mentor's Discord community. There's a help 
-  channel where you can ask questions and seek support from other community members.
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      const firstQuestion = document.querySelector('.faq-box .question');
+      const firstAnswer = firstQuestion.nextElementSibling;
+      firstQuestion.classList.add('active');
+      firstAnswer.classList.add('active');
+      const questions = document.querySelectorAll('.faq-box .question');
+      questions.forEach(question => {
+        question.addEventListener('click', () => {
+          const answer = question.nextElementSibling;
+          answer.classList.toggle('active');
+          question.classList.toggle('active');
+          questions.forEach(q => {
+            if (q !== question) {
+              const otherAnswer = q.nextElementSibling;
+              otherAnswer.classList.remove('active');
+              q.classList.remove('active');
+            }
+          });
+        });
+      });
+    });</script>
 </body>
+
 </html>
